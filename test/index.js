@@ -50,4 +50,12 @@ describe('Css selector test', () => {
     done();
   });
 
+  it('should return false for uncommon elements', (done) => {
+    const $ = cheerio.load(html);
+    const ele1 = $('div#productsRelated > div:nth-child(2) > div.content-odd > div.details > div.sprice > span.myerror');
+    const ele2 = $('div#extraDetails > div:nth-child(3) > div.form-field');
+    const relativePath = CRS.getCommonSelector(ele1, ele2, $);
+    expect(relativePath).to.be.equal(false);
+    done();
+  });
 });
