@@ -1,0 +1,4 @@
+--compilers jsx?:babel-core/register
+--require babel-polyfill
+--recursive
+--ui bdd

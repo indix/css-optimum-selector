@@ -1,0 +1,1407 @@
+
+/* widgets definitions */
+
+.noItems {
+	padding-top: 5px;
+	padding: 5px;
+	padding-left: 10px;
+	margin: 0px;
+	font-size: 10px;
+	font-weight: normal;
+}
+
+
+/* begin widgetSidebar */
+/* used in templates/cart.sidebar.tem.php */
+
+#widgetSidebar {
+	float: right;
+	font-size: 10px;
+	font-family: Tahoma;
+	width: 220px;
+	text-align: left;
+	border: 1px solid #000000;
+	margin-top: 10px;
+}
+
+#widgetSidebar .top {
+	padding-left: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: left;
+}
+
+#widgetSidebar .body {
+	margin: 5px;
+}
+
+#widgetSidebar .top a {
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#widgetSidebar .top a:hover {
+	text-decoration: none;
+}
+
+#widgetSidebar .body { }
+
+#widgetSidebar .body .items {
+	padding: 2px;
+	font-size: 11px;
+}
+
+#widgetSidebar .body .subtotal {
+	padding: 2px;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+#widgetSidebar .btm { }
+
+/* end widgetSidebar */
+
+
+
+
+
+
+/* begin widgetSidebarDetailed */
+/* used in templates/cart.sidebar.detailed.tem.php */
+
+#widgetSidebarDetailed {
+	float: right;
+	font-size: 10px;
+	font-family: Tahoma;
+	width: 220px;
+	text-align: left;
+	border: 1px solid #000000;
+	margin: 0px;
+	margin-top: 10px;
+}
+
+#widgetSidebarDetailed form {
+	margin: 0;
+	padding: 0;
+}
+
+#widgetSidebarDetailed form table {
+	padding: 0;
+	margin: 0;
+}
+
+#widgetSidebarDetailed .top {
+	padding-left: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: left;
+}
+
+#widgetSidebarDetailed .items {
+	padding: 2px;
+	font-size: 11px;
+}
+
+#widgetSidebarDetailed .price {
+	padding: 2px;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+#widgetSidebarDetailed .btm { }
+
+/* end widgetSidebarDetailed */
+
+
+
+
+
+
+/* begin widgetLanguage */
+/* used in templates/cart.language.tem.php */
+
+#widgetLanguage {
+	float: right;
+	font-size: 10px;
+	font-family: Tahoma;
+	width: 220px;
+	text-align: left;
+	border: 1px solid #000000;
+	margin-top: 10px;
+}
+
+#widgetLanguage .top {
+	padding-left: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: left;
+}
+
+#widgetLanguage .body {
+	margin: 5px;
+}
+
+#widgetLanguage .body select {
+	width: 116px;
+	height: 18px;
+	color: #464646;
+	font-size: 10px;
+	margin-left: 4px;
+}
+
+#widgetLanguage .btm {
+
+}
+
+/* end widgetLanguage */
+
+
+
+
+
+
+
+
+
+
+
+/* begin widgetCurrency */
+/* used in templates/cart.currency.tem.php */
+
+#widgetCurrency {
+	float: right;
+	font-size: 10px;
+	font-family: Tahoma;
+	width: 220px;
+	text-align: left;
+	border: 1px solid #000000;
+	margin-top: 10px;
+}
+
+#widgetCurrency .top {
+	padding-left: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: left;
+}
+
+#widgetCurrency .body {
+	margin: 5px;
+}
+
+#widgetCurrency .body select {
+	width: 116px;
+	height: 18px;
+	color: #464646;
+	font-size: 10px;
+	margin-left: 4px;
+}
+
+#widgetCurrency .btm {
+
+}
+
+/* end widgetCurrency */
+
+
+
+
+
+
+
+
+
+/* begin widgetSearch */
+/* used in templates/cart.search.tem.php */
+
+#widgetSearch {
+	float: right;
+	font-size: 10px;
+	font-family: Tahoma;
+	width: 220px;
+	text-align: left;
+	border: 1px solid #000000;
+	margin-top: 10px;
+}
+
+#widgetSearch .top {
+	padding-left: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: left;
+}
+
+#widgetSearch .body {
+	margin: 5px;
+}
+
+#widgetSearch .body .field {
+	float: left;
+	padding-left: 4px;
+}
+
+#widgetSearch .body .field input {
+	width: 150px;
+	font-size: 11px;
+	font-family: Tahoma;
+}
+
+#widgetSearch .body .button input {
+	font-size: 11px;
+	font-family: Tahoma;
+}
+
+#widgetSearch .body .button {
+	font-weight: bold;
+	font-size: 11px;
+	float: left;
+	width: 25px;
+	height: 19px;
+	padding-left: 2px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#widgetSearch .body .button  a {
+	text-decoration: none;
+}
+
+#widgetSearch .body .button a:hover {
+	text-decoration: underline;
+}
+
+#widgetSearch .advanced {
+	clear: left;
+	float: left;
+	font-size: 9px;
+	padding-top: 5px;
+	margin-left: 13px;
+	padding-bottom: 10px;
+}
+
+#widgetSearch .advanced a {
+	text-decoration: underline;
+}
+
+#widgetSearch .advanced a:hover {
+	text-decoration: none;
+}
+
+#widgetSearch .btm {
+	padding-left: 15px;
+	padding-top: 8px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+/* end widgetSearch */
+
+
+
+
+
+
+
+
+
+
+/* begin widgetVendors */
+/* used in templates/cart.vendors.tem.php */
+
+#widgetVendors {
+	float: right;
+	font-size: 10px;
+	font-family: Tahoma;
+	width: 220px;
+	text-align: left;
+	border: 1px solid #000000;
+	margin-top: 10px;
+}
+
+#widgetVendors .top {
+	padding-left: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: left;
+}
+
+#widgetVendors .body {
+	margin: 0px;
+}
+
+#widgetVendors .body ul {
+	padding: 0;
+	margin: 0 0 0 1px;
+	list-style: none;
+	text-align: left;
+}
+
+#widgetVendors .body ul li {
+	padding-left: 20px;
+	background-image: url(../../design/images/arrow.gif);
+	background-repeat: no-repeat;
+	background-position: .75em;
+	font-size: 13px;
+}
+
+#widgetVendors .body ul li a {
+	text-decoration: underline;
+	line-height: 20px;
+}
+
+#widgetVendors .body ul li a:hover {
+	text-decoration: none;
+}
+
+#widgetVendors .btm {
+
+}
+
+/* end widgetVendors */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* begin widgetCategories */
+/* used in templates/cart.categories.tem.php */
+
+#widgetCategories {
+	float: right;
+	font-size: 10px;
+	font-family: Tahoma;
+	width: 220px;
+	text-align: left;
+	border: 1px solid #000000;
+	margin-top: 10px;
+}
+
+#widgetCategories .top {
+	padding-left: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: left;
+}
+
+#widgetCategories .body {
+	margin-bottom: 5px;
+}
+
+#widgetCategories .body ul {
+	padding: 0;
+	margin: 0 0 0 1px;
+	list-style: none;
+	text-align: left;
+}
+
+#widgetCategories .body ul li {
+	padding-left: 20px;
+	background-image: url(../../design/images/arrow.gif);
+	background-repeat: no-repeat;
+	background-position: .75em;
+	font-size: 13px;
+}
+
+#widgetCategories .body ul li a {
+	text-decoration: underline;
+	line-height: 20px;
+}
+
+#widgetCategories .body ul li a:hover {
+	text-decoration: none;
+}
+
+#widgetCategories .btm { }
+
+/* end widgetCategories */
+
+
+
+
+
+
+
+/* begin widgetRewardPoints */
+/* used in templates/cart.reward.points.tem.php */
+
+#widgetRewardPoints {
+	float: right;
+	font-size: 10px;
+	font-family: Tahoma;
+	width: 220px;
+	text-align: left;
+	border: 1px solid #000000;
+	margin-top: 10px;
+}
+
+#widgetRewardPoints .top {
+	padding-left: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: left;
+}
+
+#widgetRewardPoints .body {
+	padding: 8px;
+}
+
+#widgetRewardPoints .body a {
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+#widgetRewardPoints .body a:hover {
+	text-decoration: none;
+	font-weight: normal;
+}
+
+#widgetRewardPoints .btm { }
+
+/* end widgetRewardPoints */
+
+
+
+
+
+
+
+
+
+
+
+/* begin widgetInformation */
+/* used in templates/cart.information.tem.php */
+
+#widgetInformation {
+	float: right;
+	font-size: 10px;
+	font-family: Tahoma;
+	width: 220px;
+	text-align: left;
+	border: 1px solid #000000;
+	margin-top: 10px;
+}
+
+#widgetInformation .top {
+	padding-left: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: left;
+}
+
+#widgetInformation .body {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#widgetInformation .body ul {
+	padding: 0;
+	margin: 0 0 0 1px;
+	list-style: none;
+	text-align: left;
+}
+
+#widgetInformation .body ul li {
+	padding-left: 20px;
+	background-image: url(../../design/images/arrow.gif);
+	background-repeat: no-repeat;
+	background-position: .75em;
+	font-size: 13px;
+}
+
+#widgetInformation .body ul li a {
+	text-decoration: underline;
+	line-height: 20px;
+}
+
+#widgetInformation .body ul li a:hover {
+	text-decoration: none;
+}
+
+#widgetInformation .btm {
+
+}
+
+/* end widgetInformation */
+
+
+
+
+
+
+
+
+
+/* begin widgetNewArrivals */
+/* used in templates/cart.new.arrivals.tem.php */
+
+#widgetNewArrivals {
+	float: right;
+	font-size: 10px;
+	font-family: Tahoma;
+	width: 220px;
+	text-align: left;
+	border: 1px solid #000000;
+	margin-top: 10px;
+	padding-bottom: 10px;
+}
+
+#widgetNewArrivals .top {
+	padding-left: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: left;
+}
+
+#widgetNewArrivals .body {
+	margin: 5px;
+}
+
+#widgetNewArrivals .body .photo {
+	width: auto;
+	float: left;
+}
+
+#widgetNewArrivals .body .title {
+	font-size: 11px;
+	font-weight: bold;
+	text-align: right;
+	line-height: 16px;
+}
+
+#widgetNewArrivals .body .title a {
+	text-decoration: underline;
+}
+
+#widgetNewArrivals .body .title a:hover {
+	text-decoration: none;
+}
+
+#widgetNewArrivals .body .sprice {
+	float: right;
+	font-size: 11px;
+	font-weight: bold;
+	text-align: right;
+	line-height: 18px;
+	padding-top: 8px;
+	width: 75px;
+}
+
+#widgetNewArrivals .body .sdetails {
+	background:url(../../design/images/small_btn.gif) no-repeat center center;
+	font-weight: bold;
+	font-size: 11px;
+	float: right;
+	clear: right;
+	padding-top: 10px;
+	padding-bottom: 6px;
+	width: 64px;
+	height: 19px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#widgetNewArrivals .body .sdetailsNoImg {
+	font-weight: bold;
+	font-size: 11px;
+	float: right;
+	clear: right;
+	padding-top: 10px;
+	padding-bottom: 6px;
+	width: 64px;
+	height: 19px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+
+#widgetNewArrivals .body .sdetails a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#widgetNewArrivals .body .sdetails a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+#widgetNewArrivals .body .all-link  {
+	padding-top: 15px;
+	float: right;
+	clear: right;
+	width: 100px;
+	text-align: right;
+}
+
+#widgetNewArrivals .body .all-link a {
+	text-decoration: underline;
+}
+
+#widgetNewArrivals .body .all-link a:hover {
+	text-decoration: none;
+}
+
+#widgetNewArrivals .btm { }
+
+/* end widgetNewArrivals */
+
+
+
+
+
+
+
+
+/* begin widgetSpecials */
+/* used in templates/cart.specials.tem.php */
+
+#widgetSpecials {
+	float: right;
+	font-size: 10px;
+	font-family: Tahoma;
+	width: 220px;
+	text-align: left;
+	border: 1px solid #000000;
+	margin-top: 10px;
+	padding-bottom: 10px;
+	height: auto;
+}
+
+#widgetSpecials .top {
+	padding-left: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: left;
+}
+
+#widgetSpecials .body {
+	margin: 5px;
+}
+
+#widgetSpecials .body .photo {
+	width: auto;
+	float: left;
+}
+
+#widgetSpecials .body .title {
+	font-size: 11px;
+	font-weight: bold;
+	text-align: right;
+	line-height: 16px;
+}
+
+#widgetSpecials .body .title a {
+	text-decoration: underline;
+}
+
+#widgetSpecials .body .title a:hover {
+	text-decoration: none;
+}
+
+#widgetSpecials .body .sprice {
+	float: right;
+	font-size: 11px;
+	font-weight: bold;
+	text-align: right;
+	line-height: 18px;
+	padding-top: 8px;
+	width: 75px;
+}
+
+#widgetSpecials .body .sdetails {
+	background:url(../../design/images/small_btn.gif) no-repeat center center;
+	font-weight: bold;
+	font-size: 11px;
+	float: right;
+	clear: right;
+	padding-top: 10px;
+	padding-bottom: 6px;
+	width: 64px;
+	height: 19px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#widgetSpecials .body .sdetailsNoImg {
+	font-weight: bold;
+	font-size: 11px;
+	float: right;
+	clear: right;
+	padding-top: 10px;
+	padding-bottom: 6px;
+	width: 64px;
+	height: 19px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#widgetSpecials .body .sdetails a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#widgetSpecials .body .sdetails a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+#widgetSpecials .body .all-link  {
+	padding-top: 15px;
+	float: right;
+	clear: right;
+	width: 100px;
+	text-align: right;
+}
+
+#widgetSpecials .body .all-link a {
+	text-decoration: underline;
+}
+
+#widgetSpecials .body .all-link a:hover {
+	text-decoration: none;
+}
+
+#widgetSpecials .btm { }
+
+
+/* end widgetSpecials */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* begin widgetTopSellers */
+/* used in templates/cart.top.sellers.tem.php */
+#widgetTopSellers {
+	float: right;
+	font-size: 10px;
+	font-family: Tahoma;
+	width: 220px;
+	text-align: left;
+	border: 1px solid #000000;
+	margin-top: 10px;
+	padding-bottom: 10px;
+}
+
+#widgetTopSellers .top {
+	padding-left: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: left;
+}
+
+#widgetTopSellers .body {
+	margin: 5px;
+}
+
+#widgetTopSellers .body .photo {
+	width: auto;
+	float: left;
+}
+
+#widgetTopSellers .body .title {
+	font-size: 11px;
+	font-weight: bold;
+	text-align: right;
+	line-height: 16px;
+}
+
+#widgetTopSellers .body .title a {
+	text-decoration: underline;
+}
+
+#widgetTopSellers .body .title a:hover {
+	text-decoration: none;
+}
+
+#widgetTopSellers .body .sprice {
+	float: right;
+	font-size: 11px;
+	font-weight: bold;
+	text-align: right;
+	line-height: 18px;
+	padding-top: 8px;
+	width: 75px;
+}
+
+#widgetTopSellers .body .sdetails {
+	background:url(../../design/images/small_btn.gif) no-repeat center center;
+	font-weight: bold;
+	font-size: 11px;
+	float: right;
+	clear: right;
+	padding-top: 10px;
+	padding-bottom: 6px;
+	width: 64px;
+	height: 19px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#widgetTopSellers .body .sdetailsNoImg {
+	font-weight: bold;
+	font-size: 11px;
+	float: right;
+	clear: right;
+	padding-top: 10px;
+	padding-bottom: 6px;
+	width: 64px;
+	height: 19px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#widgetTopSellers .body .sdetails a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#widgetTopSellers .body .sdetails a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+#widgetTopSellers .body .all-link  {
+	padding-top: 15px;
+	float: right;
+	clear: right;
+	width: 100px;
+	text-align: right;
+}
+
+#widgetTopSellers .body .all-link a {
+	text-decoration: underline;
+}
+
+#widgetTopSellers .body .all-link a:hover {
+	text-decoration: none;
+}
+
+#widgetTopSellers .btm { }
+
+/* end widgetTopSellers */
+
+
+
+
+
+
+
+
+/* begin widgetFeatured */
+/* used in templates/cart.featured.tem.php */
+
+#widgetFeatured {
+	float: right;
+	font-size: 10px;
+	font-family: Tahoma;
+	width: 220px;
+	text-align: left;
+	border: 1px solid #000000;
+	margin-top: 10px;
+	padding-bottom: 10px;
+}
+
+#widgetFeatured .top {
+	padding-left: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: left;
+}
+
+#widgetFeatured .body {
+	margin: 5px;
+}
+
+#widgetFeatured .body .photo {
+	width: auto;
+	float: left;
+}
+
+#widgetFeatured .body .title {
+	font-size: 11px;
+	font-weight: bold;
+	text-align: right;
+	line-height: 16px;
+}
+
+#widgetFeatured .body .title a {
+	text-decoration: underline;
+}
+
+#widgetFeatured .body .title a:hover {
+	text-decoration: none;
+}
+
+#widgetFeatured .body .sprice {
+	float: right;
+	font-size: 11px;
+	font-weight: bold;
+	text-align: right;
+	line-height: 18px;
+	padding-top: 8px;
+	width: 75px;
+}
+
+#widgetFeatured .body .sdetails {
+	background:url(../../design/images/small_btn.gif) no-repeat center center;
+	font-weight: bold;
+	font-size: 11px;
+	float: right;
+	clear: right;
+	padding-top: 10px;
+	padding-bottom: 6px;
+	width: 64px;
+	height: 19px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#widgetFeatured .body .sdetailsNoImg {
+	font-weight: bold;
+	font-size: 11px;
+	float: right;
+	clear: right;
+	padding-top: 10px;
+	padding-bottom: 6px;
+	width: 64px;
+	height: 19px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#widgetFeatured .body .sdetails a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#widgetFeatured .body .sdetails a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+#widgetFeatured .body .all-link  {
+	padding-top: 15px;
+	float: right;
+	clear: right;
+	width: 100px;
+	text-align: right;
+}
+
+#widgetFeatured .body .all-link a {
+	text-decoration: underline;
+}
+
+#widgetFeatured .body .all-link a:hover {
+	text-decoration: none;
+}
+
+#widgetFeatured .btm {
+}
+
+/* end widgetFeatured */
+
+
+
+
+
+
+
+/* begin widgetSubscribe */
+/* used in templates/cart.subscribe.tem.php */
+
+#widgetSubscribe {
+	margin-top: 10px;
+	float: right;
+	font-size: 10px;
+	font-family: Tahoma;
+	width: 220px;
+	text-align: left;
+	border: 1px solid #000000;
+}
+
+#widgetSubscribe .top {
+	padding-left: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: left;
+}
+
+#widgetSubscribe .body {
+	height: 25px;
+	padding: 10px;
+}
+
+#widgetSubscribe .body .field {
+	float: left;
+}
+
+#widgetSubscribe .body .field input {
+	width: 150px;
+	color: #464646;
+	font-size: 11px;
+	font-family: Tahoma;
+	padding-left: 4px;
+}
+
+#widgetSubscribe .body .button input {
+	color: #464646;
+	font-size: 11px;
+	font-family: Tahoma;
+}
+
+#widgetSubscribe .body .button {
+	font-weight: bold;
+	font-size: 11px;
+	float: left;
+	width: 25px;
+	height: 19px;
+	padding-left: 2px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#widgetSubscribe .body .button  a {
+	text-decoration: none;
+}
+
+#widgetSubscribe .body .button a:hover {
+	text-decoration: underline;
+}
+
+#widgetSubscribe .btm {
+
+}
+
+/* end widgetSubscribe */
+
+
+
+
+
+
+
+
+
+
+
+
+/* begin widgetFooter */
+/* used in templates/cart.footer.tem.php */
+
+#widgetFooter {
+	height: auto;
+	margin-top: 25px;
+	width: 600px;
+}
+
+#widgetFooter hr {
+	background-color: #878787;
+	color: #878787;
+	height: 1px;
+	clear: left;
+	float: left;
+}
+
+#widgetFooter .actionItems {
+	clear: left;
+	float: left;
+	line-height: 22px;
+	font-size: 100%;
+	font-weight: bold;
+	width: 100%;
+}
+
+#widgetFooter .actionItems a {
+	text-decoration: underline;
+}
+
+#widgetFooter .actionItems a:hover {
+	text-decoration: none;
+}
+
+#widgetFooter .copyright {
+	clear: left;
+	float: left;
+	line-height: 22px;
+	margin-top: 20px;
+	width: 150px;;
+}
+
+#widgetFooter .copyright a {
+	text-decoration: underline;
+}
+
+#widgetFooter .copyright a:hover {
+	text-decoration: none;
+}
+
+#widgetFooter .img {
+	border: 1px solid orange;
+	background: url(../images/design/p1.gif) no-repeat fixed center left;
+	float: left;
+	width: 165px;
+	height: 30px;
+}
+
+#widgetFooter .nav {
+	float: right;
+	text-align: left;
+	width: auto;
+	line-height: 16px;
+	padding: 6px;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+#widgetFooter .nav .title {
+	text-align: left;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+#widgetFooter .nav ul {
+	padding: 0;
+	margin: 0 0 0 1px;
+	list-style: none;
+	text-align: left;
+}
+
+#widgetFooter .nav ul li {
+	text-align: left;
+}
+
+#widgetFooter .nav ul li a {
+	text-decoration: underline;
+}
+
+#widgetFooter .nav ul li a:hover {
+	text-decoration: underline;
+}
+
+/* end widgetFooter */
+
+
+/* begin widgetImages */
+/* used in templates/cart.left_image.tem.php */
+/* used in templates/cart.right_image.tem.php */
+/* used in templates/cart.horizontal_image.tem.php */
+
+.widgetImages {
+	margin-top: 15px;
+	float: right;
+	color: #464646;
+	font-family: Tahoma;
+	text-align: left;
+}
+
+.widgetImages .text {
+	text-align: left;
+	font-size: 12px;
+	clear: left;
+}
+/* end widgetImages */
+
+
+/* begin widgetPos */
+/* used in templates/cart.pos.tem.php */
+
+#widgetPos {
+	float: left;
+	clear: both;
+	width: 98%;
+	padding-bottom: 15px;
+	text-align: left;
+	margin: 5px;
+}
+
+#widgetPos #productNumber {
+	clear: left;
+	float: left;
+	padding-right: 15px;
+	width: 100%;
+}
+
+#widgetPos #postal {
+	float: left;
+	padding-right: 15px;
+}
+
+#widgetPos #cvv {
+	float: left;
+}
+
+#widgetPos #cash {
+	float: left;
+	clear: left;
+	padding-right: 15px;
+	padding-top: 10px;
+	width: 95%;
+}
+
+#widgetPos #credit {
+	float: left;
+	clear: left;
+	padding-top: 10px;
+	width: 95%;
+}
+
+#widgetPos #check {
+	float: left;
+	clear: left;
+	padding-right: 15px;
+	padding-top: 10px;
+	width: 95%;
+}
+
+#widgetPos #expiration {
+	float: left;
+	padding-top: 10px;
+}
+
+#widgetPos #links {
+	float: left;
+	clear: left;
+	padding-top: 10px;
+}
+
+#widgetPos .link {
+	padding-right: 20px;
+	float: left;
+	clear: none;
+}
+/* end widgetPos */
+
+/* begin widgetShopByPrice */
+#widgetShopByPrice {
+	float: right;
+	font-size: 10px;
+	font-family: Tahoma;
+	width: 220px;
+	text-align: left;
+	border: 1px solid #000000;
+	margin-top: 10px;
+	padding-bottom: 10px;
+}
+
+#widgetShopByPrice .top {
+	padding-left: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: left;
+}
+
+#widgetShopByPrice .body {
+	margin: 5px;
+}
+/* end widgetShopByPrice */
+
+
+
+
+
+
+/* begin widgetCustomProductLists */
+/* used in templates/cart.custom.list.tem.php */
+
+.widgetCustomProductLists {
+	float: right;
+	font-size: 10px;
+	font-family: Tahoma;
+	width: 220px;
+	text-align: left;
+	border: 1px solid #000000;
+	margin-top: 10px;
+}
+
+.widgetCustomProductLists .top {
+	padding-left: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: left;
+}
+
+.widgetCustomProductLists .body {
+	margin: 0px;
+}
+
+.widgetCustomProductLists .body ul {
+	padding: 0;
+	margin: 0 0 0 1px;
+	list-style: none;
+	text-align: left;
+}
+
+.widgetCustomProductLists .body ul li {
+	padding-left: 20px;
+	background-image: url(../../design/images/arrow.gif);
+	background-repeat: no-repeat;
+	background-position: .75em;
+	font-size: 13px;
+}
+
+.widgetCustomProductLists .body ul li a {
+	text-decoration: underline;
+	line-height: 20px;
+}
+
+.widgetCustomProductLists .body ul li a:hover {
+	text-decoration: none;
+}
+
+.widgetCustomProductLists .btm {
+
+}
+
+/* end widgetCustomProductLists */

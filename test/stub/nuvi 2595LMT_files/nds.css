@@ -1,0 +1,3298 @@
+/* !!!IMPORTANT!!! PLEASE READ: do NOT modify this file.  This file WILL GET OVERWRITTEN during every upgrade.*/
+/* If you would like to implement custom CSS changes, please do so in the issues.css file, NOT HERE. */
+/* In that file you can override classes declared here and implement your custom CSS changes. */
+/* We make sure to include issues.css last in all of our distributed templates to make sure that your changes */
+/* override all of the in-house CSS.  However, it is up to you to make sure issues.css is included last to make sure */
+/* that your CSS changes take effect. */
+/* file should be the same */
+/* css/nds.css */
+/* secure/css/nds.css */
+
+
+body {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 11px;
+	background-color: #FFFFFF;
+	color: #5B5B5B;
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+}
+
+a {
+	color: #E50029;
+}
+
+a:active {
+	color: #E50029;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #E50029;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+
+a:visited:hover {
+	color: #E50029;
+	text-decoration: underline;
+}
+
+.sublink {
+	font-size: 85%;
+}
+
+a.sublink {
+	color: #E50029;
+}
+
+a.sublink:active {
+	text-decoration: underline;
+}
+
+a.sublink:visited {
+	text-decoration: underline;
+}
+
+a.sublink:hover {
+	text-decoration: underline;
+}
+
+a.sublink:visited:hover {
+	text-decoration: underline;
+}
+
+h2, .page-title  {
+	font-size: 18px;
+	font-weight: bold;
+	padding: 3px;
+	padding-left: 0;
+	text-align: left;
+	color: #878787;
+}
+
+h2 a {
+	color: #878787;
+	text-decoration: none;
+}
+
+h2 a:hover {
+	color: #878787;
+	text-decoration: underline;
+}
+
+form {
+	margin: 0;
+}
+
+
+.padMe {
+	float: left;
+	padding: 5px;
+	width: 95%;
+}
+
+.display-line {
+	font-size: 11px;
+	padding: 3px;
+}
+
+.display-line-footer {
+	font-size: 11px;
+	padding: 3px;
+	text-align: right;
+	line-height: 20px;
+}
+
+#bg {
+	background: url(../design/images/bg_11.jpg) repeat fixed top center;
+	width: 100%;
+	height: 140px;
+	left: 0px;
+	top: 0px;
+	z-index: -1;
+}
+
+#page {
+	width: 724px;
+	height: auto;
+	position: absolute;
+	left: 10%;
+	top: 0px;
+	z-index: 1;
+}
+
+#tabs {
+	clear: left;
+	text-align: right;
+	padding-right: 15px;
+	width: 724px;
+}
+
+#masthead {
+	clear: left;
+	width: 724px;
+	height: 140px;
+}
+
+.container {
+  	float: left;
+  	width: 65%;
+  	padding: 10px;
+  	text-align: left;
+}
+
+hr {
+  	float: left;
+  	width: 98%;
+  	color: #E2E2E2;
+  	background-color: #E2E2E2;
+  	height: 1px;
+}
+
+.disabled {
+	font-weight: bold;
+	color: #E2E2E2;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.myerror, .pending{
+	font-weight: bold;
+	color: #C00000;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.price, .display-item-price {
+	font-weight: bold;
+	color: #E50029;
+	font-size: 110%;
+	padding: 5px;
+}
+
+.form-label {
+  	clear: left;
+  	float: left;
+  	text-align: right;
+  	padding: 4px;
+  	width: 20%;
+}
+
+.form-label-required {
+  	clear: left;
+  	float: left;
+  	text-align: right;
+  	padding: 4px;
+  	width: 20%;
+  	font-weight: bold;
+}
+
+.form-field {
+  	padding: 4px;
+	height: auto;
+	float: left;
+}
+
+
+#infolist {
+	margin-left: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+#infolist li {
+	padding-left: 17px;
+	background-image: url(../design/images/arrow.gif);
+	background-repeat: no-repeat;
+	background-position: 0.5em;
+}
+
+input, textarea, select {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+#orderStats {
+	padding: 2px;
+	margin: 5px;
+	float: left;
+	border: 1px solid #D8DDE3;
+	height: 190px;
+	width: 25%;
+}
+
+.goLeft, .section {
+	float: left;
+	text-align: left;
+}
+
+.goRight, .logout {
+	text-align: right;
+	float: right;
+}
+
+.goUp {
+	vertical-align: top;
+}
+
+.moneyFormat{
+	text-align: right;
+	height:20px;
+	vertical-align: middle;
+}
+
+
+#pageNote {
+	width: 95%;
+	text-align: left;
+	float: left;
+	padding-bottom: 10px;
+}
+
+.submitBtn {
+	font-size: 130%;
+	font-weight: bold;
+}
+
+.submitOrder {
+	width: 80%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #C6C6C6;
+}
+#logo {
+	float: left;
+	height: 73px;
+	vertical-align: middle;
+	padding-top: 30px;
+}
+
+
+
+
+
+
+
+
+/* begin giftCerts */
+/* used in templates/gift.certs.tem.php */
+
+#giftCerts {
+	text-align: left;
+	margin: 5px;
+	width: 500px;
+}
+
+#giftCerts h2 { }
+
+#giftCerts #pageNote {
+	height: 25px;
+	width: auto;
+}
+
+#giftCerts .form-label { }
+
+#giftCerts .form-field { }
+
+
+/* end giftCerts */
+
+
+
+
+
+
+
+/* begin categoryList */
+/* used in templates/category.grid.tem.php */
+/* only used when the cart is displaying a "list" of categories */
+
+#categoryList {
+}
+
+#categoryList h2 { }
+
+#categoryList #categoryDescription {
+}
+
+#categoryList #topOptions .sort .option select {
+}
+
+#categoryList .content-odd1 {
+}
+
+#categoryList .content-even1 {
+}
+
+#categoryList .title {
+}
+
+#categoryList .title a {
+}
+
+#categoryList .title a:hover {
+}
+
+#categoryList .photo {
+}
+
+#categoryList .description {
+}
+
+#categoryList .details {
+}
+
+#categoryList .details .buttons {
+}
+
+#categoryList .details .buttons .detailBtn {
+}
+
+#categoryList .details .buttons .detailBtn a {
+}
+
+#categoryList .details .buttons .detailBtn a:hover {
+}
+
+
+#categoryList #btmOptions {
+}
+
+
+#categoryList #btmOptions .pagination {
+}
+
+#categoryList #btmOptions .pagination a {
+}
+
+#categoryList #btmOptions .pagination a:hover {
+}
+
+#categoryList homepagecontent {
+}
+
+/* end categoryList */
+
+
+
+
+
+
+
+
+
+
+
+
+/* begin categoryGrid */
+/* only used when the cart is displaying a "grid" (multiple columns) of categories */
+
+#categoryGrid {
+	text-align: left;
+	margin: 5px;
+	width: 500px;
+}
+
+#categoryGrid h2 { }
+
+#categoryGrid #categoryDescription {
+	float: left;
+	clear: left;
+	margin-bottom: 10px;
+	border: 1px solid #FFFFFF;
+	width: auto;
+	height: auto;
+}
+
+/* used in 2 column category Grids */
+#categoryGrid .content-odd2 {
+	border: 1px dotted #D9D9D9;
+	text-align: center;
+	vertical-align: top;
+	padding: 8px;
+	margin:	1px;
+	width: 45%;
+	padding-bottom: 15px;
+}
+
+#categoryGrid .content-even2 {
+	border: 1px dotted #D9D9D9;
+	text-align: center;
+	vertical-align: top;
+	padding: 8px;
+	margin:	1px;
+	width: 45%;
+	padding-bottom: 15px;
+}
+
+
+/* used in 3 column category Grids */
+#categoryGrid .content-odd3 {
+	border: 1px dotted #D9D9D9;
+	text-align: center;
+	vertical-align: top;
+	padding: 8px;
+	margin:	1px;
+	width: 30%;
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-bottom: 15px;
+}
+
+#categoryGrid .content-even3 {
+	border: 1px dotted #D9D9D9;
+	text-align: center;
+	vertical-align: top;
+	padding: 8px;
+	margin:	1px;
+	width: 30%;
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-bottom: 15px;
+}
+
+
+/* used in 4 column category Grids */
+#categoryGrid .content-odd4 {
+	border: 1px dotted #D9D9D9;
+	text-align: center;
+	vertical-align: top;
+	padding: 8px;
+	margin:	1px;
+	width: 22%;
+	padding-bottom: 15px;
+}
+
+#categoryGrid .content-even4 {
+	border: 1px dotted #D9D9D9;
+	text-align: center;
+	vertical-align: top;
+	padding: 8px;
+	margin:	1px;
+	width: 22%;
+	padding-bottom: 15px;
+}
+
+
+/* used in 5 column category Grids */
+#categoryGrid .content-odd5 {
+	border: 1px dotted #D9D9D9;
+	text-align: center;
+	vertical-align: top;
+	padding: 8px;
+	margin:	1px;
+	width: auto;
+	padding-bottom: 15px;
+}
+
+#categoryGrid .content-even5 {
+	border: 1px dotted #D9D9D9;
+	text-align: center;
+	vertical-align: top;
+	padding: 8px;
+	margin:	1px;
+	width: auto;
+	padding-bottom: 15px;
+}
+
+
+#categoryGrid .title {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	float: left;
+	clear: both;
+	width: 100%;
+	text-align: center;
+}
+
+#categoryGrid .title a {
+	color: #C50024;
+	font-size: 14px;
+	text-decoration: underline;
+	font-weight: bold;
+	line-height: 16px;
+}
+
+#categoryGrid .title a:hover {
+	text-decoration: none;
+}
+
+#categoryGrid .photo {
+	width: 100%;
+	height: auto;
+	float: left;
+	clear: left;
+}
+
+#categoryGrid .description {
+	width: 100%;
+	text-align: center;
+	clear: both;
+}
+
+#categoryGrid .details {
+	width: 100%;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: center;
+	color: #464646;
+}
+
+#categoryGrid .details .buttons {
+	width: 100%;
+	float: left;
+	clear: left;
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#categoryGrid .details .buttons .detailBtn {
+	background:url(../design/images/medium_btn.gif) no-repeat center center;
+	font-weight: bold;
+	font-size: 10px;
+	float: left;
+	padding-top: 6px;
+	width: 100%;
+	height: 19px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#categoryGrid .details .buttons .detailBtn a {
+	text-align: center;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#categoryGrid .details .buttons .detailBtn a:hover {
+	text-align: center;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+#categoryGrid #btmOptions {
+	height: 40px;
+}
+
+#categoryGrid #btmOptions .pagination {
+	float: right;
+	padding-top: 18px;
+	height: 22px;
+	font-size: 12px;
+}
+
+#categoryGrid #btmOptions .pagination a {
+	color: #C00000;
+	text-decoration: underline;
+}
+
+#categoryGrid #btmOptions .pagination a:hover {
+	color: #000000;
+	text-decoration: none;
+
+}
+
+#categoryGrid homepagecontent {
+	clear: left;
+	float: left;
+}
+
+/* end categoryGrid */
+
+
+
+
+
+
+
+/* begin affiliateLogin */
+/* used in templates/affiliate.login.tem.php */
+/* used in templates/affiliate.login.password.tem.php */
+/* used in templates/affiliate.default.tem.php */
+
+#affiliateLogin {
+	text-align: left;
+	width: 500px;
+	margin: 5px;
+}
+
+#affiliateLogin h2 { }
+
+
+/* end affiliateLogin */
+
+
+
+
+
+
+
+
+
+/* begin customerLogin */
+/* used in templates/client.login.tem.php */
+/* used in templates/client.login.password.tem.php */
+/* used in templates/client.create.form.tem.php */
+
+#customerLogin {
+	text-align: left;
+	width: 500px;
+	margin: 5px;
+}
+
+#customerLogin h2 { }
+
+#customerLogin #existingCustomer {
+	height: 190px;
+	width: 265px;
+	clear: left;
+	float: left;
+}
+
+#customerLogin #newCustomer {
+	height: 190px;
+	width: 200px;
+	float: right;
+}
+
+#existingCustomer .hdr-title, #newCustomer .hdr-title ,#createCustomer .hdr-title , #passwordRemindCustomer .hdr-title {
+	color: #FFFFFF;
+	background-color: #878787;
+	text-align: left;
+	padding:5px;
+	font-weight: bold;
+}
+
+#existingCustomer .body { }
+
+#newCustomer .body {
+	padding: 5px;
+	text-align: center;
+}
+
+#newCustomer .body input {
+	margin-top: 12px;
+}
+
+
+#customerLogin #passwordRemindCustomer, #customerLogin #createCustomer {
+	width: 90%;
+}
+
+#customerLogin #createCustomer .body { }
+
+
+/* end customerLogin */
+
+
+
+
+
+
+
+/* begin productGrid */
+/* only used when a product is displaying a "grid" (multiple columns) of products */
+
+#productGrid {
+	text-align: left;
+	margin: 5px;
+	width: 500px;
+}
+
+#productGrid h2 { }
+
+#productGrid #categoryDescription {
+	float: left;
+	clear: left;
+	margin-bottom: 10px;
+	border: 1px solid #FFFFFF;
+	width: auto;
+	height: auto;
+}
+
+#productGrid table{
+	float: left;
+	clear: left;
+	width: 100%;
+}
+
+#productGrid #topOptions {
+	width: auto;
+	height: 40px;
+	float: left;
+	clear: left;
+}
+
+#productGrid #topOptions .search {
+	float: left;
+	clear: left;
+	height: 18px;
+}
+
+#productGrid #topOptions .myrow {
+	width: 500px;
+	height: 25px;
+}
+
+#productGrid #topOptions .display {
+	float: left;
+	clear: left;
+	height: 18px;
+	width: 260px;
+	text-align: left;
+}
+
+#productGrid #topOptions .sort {
+	width: 210px;
+	height: 20px;
+	float: right;
+	text-align: right;
+}
+
+#productGrid #topOptions .sort .label {
+	float: left;
+	height: 18px;
+	padding: 2px;
+	padding-top: 5px;
+}
+
+#productGrid #topOptions .sort .option {
+	float: left;
+	height: 18px;
+	padding: 2px;
+}
+
+#productGrid #topOptions .sort .option select {
+	height: 18px;
+}
+
+
+/* used in 2 column product Grids */
+#productGrid .content-even2 {
+	border: 1px dotted #D9D9D9;
+	text-align: center;
+	vertical-align: top;
+	padding: 8px;
+	margin:	1px;
+	width: 45%;
+	padding-bottom: 15px;
+}
+
+#productGrid .content-odd2 {
+	border: 1px dotted #D9D9D9;
+	text-align: center;
+	vertical-align: top;
+	padding: 8px;
+	margin:	1px;
+	width: 45%;
+	padding-bottom: 15px;
+}
+
+
+/* used in 3 column product Grids */
+#productGrid .content-even3 {
+	border: 1px dotted #D9D9D9;
+	text-align: center;
+	vertical-align: top;
+	padding: 8px;
+	margin:	1px;
+	width: 30%;
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-bottom: 15px;
+}
+
+#productGrid .content-odd3 {
+	border: 1px dotted #D9D9D9;
+	text-align: center;
+	vertical-align: top;
+	padding: 8px;
+	margin:	1px;
+	width: 30%;
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-bottom: 15px;
+}
+
+
+/* used in 4 column product Grids */
+#productGrid .content-even4 {
+	border: 1px dotted #D9D9D9;
+	text-align: center;
+	vertical-align: top;
+	padding: 8px;
+	margin:	1px;
+	width: 22%;
+	padding-bottom: 15px;
+}
+
+#productGrid .content-odd4 {
+	border: 1px dotted #D9D9D9;
+	text-align: center;
+	vertical-align: top;
+	padding: 8px;
+	margin:	1px;
+	width: 22%;
+	padding-bottom: 15px;
+}
+
+
+/* used in 5 column product Grids */
+#productGrid .content-even5 {
+	border: 1px dotted #D9D9D9;
+	text-align: center;
+	vertical-align: top;
+	padding: 8px;
+	margin:	1px;
+	width: 18%;
+	padding-bottom: 15px;
+}
+
+#productGrid .content-odd5 {
+	border: 1px dotted #D9D9D9;
+	text-align: center;
+	vertical-align: top;
+	padding: 8px;
+	margin:	1px;
+	width: 18%;
+	padding-bottom: 15px;
+}
+
+/* used in 6 column product Grids */
+#productGrid .content-even6 {
+	border: 1px dotted #D9D9D9;
+	text-align: center;
+	vertical-align: top;
+	padding: 8px;
+	margin:	1px;
+	width: 15%;
+	padding-bottom: 15px;
+}
+
+#productGrid .content-odd6 {
+	border: 1px dotted #D9D9D9;
+	text-align: center;
+	vertical-align: top;
+	padding: 8px;
+	margin:	1px;
+	width: 15%;
+	padding-bottom: 15px;
+}
+#productGrid .title {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	text-align: center;
+	float: left;
+	clear: both;
+	width: 100%;
+}
+
+#productGrid .title a {
+	color: #C50024;
+	font-size: 14px;
+	text-decoration: underline;
+	font-weight: bold;
+	line-height: 16px;
+}
+
+#productGrid .title a:hover {
+	text-decoration: none;
+}
+
+#productGrid .photo {
+	width: 100%;
+	height: auto;
+	float: left;
+	clear: left;
+}
+
+#productGrid .details {
+	width: 100%;
+	height: auto;
+	font-size: 10px;
+	font-weight: normal;
+	float: right;
+	clear: none;
+	text-align: left;
+	color: #464646;
+}
+
+#productGrid .description {
+	float: left;
+	clear: left;
+	width: 100%;
+	height: auto;
+	text-align: left;
+}
+
+#productGrid .details .sprice {
+	float: left;
+	clear: left;
+	width: 100%;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+#productGrid .details .buttons {
+	width: 100%;
+	height: auto;
+	float: left;
+	clear: left;
+	text-align: center;
+}
+
+#productGrid .details .buttons .detailBtn {
+	background:url(../design/images/small_btn.gif) no-repeat center center;
+	font-weight: bold;
+	font-size: 10px;
+	float: left;
+	padding-top: 6px;
+	width: 100%;
+	height: 19px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#productGrid .details .buttons .detailBtnNoImg {
+	font-weight: bold;
+	font-size: 10px;
+	float: left;
+	padding-top: 6px;
+	width: 100%;
+	height: 19px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#productGrid .details .buttons .detailBtn a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#productGrid .details .buttons .detailBtn a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+#productGrid .details .buttons .addToCartBtn {
+	background:url(../design/images/medium_btn.gif) no-repeat center center;
+	font-weight: bold;
+	font-size: 11px;
+	float: left;
+	padding-top: 6px;
+	width: 100%;
+	height: 19px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#productGrid .details .buttons .addToCartBtnNoImg {
+	font-weight: bold;
+	font-size: 11px;
+	float: left;
+	padding-top: 6px;
+	width: 100%;
+	height: 19px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#productGrid .details .buttons .addToCartBtn a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#productGrid .details .buttons .addToCartBtn a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+#productGrid .details .pricenote {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #C00000;
+	font-weight: bold;
+}
+
+#productGrid .options {
+	clear: left;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	margin-top: 10px;
+}
+
+#productGrid .options .form-label{
+	clear: left;
+	float: left;
+	text-align: center;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+#productGrid .options .form-field{
+	float: left;
+	text-align: center;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	padding-bottom: 10px;
+}
+
+#productGrid #btmOptions {
+	clear: left;
+	float: left;
+	width: 100%;
+	height: 60px;
+}
+
+#productGrid #btmOptions .batchAddToCartButton {
+	background:url(../design/images/large_btn.gif) no-repeat;
+	font-weight: bold;
+	font-size: 10px;
+	float: left;
+	width: 158px;
+	height: 19px;
+	text-align: center;
+	padding: 3px;
+	vertical-align: middle;
+	margin-top: 15px;
+}
+
+#productGrid #btmOptions .batchAddToCartButtonImg {
+	font-weight: bold;
+	font-size: 10px;
+	float: left;
+	width: 158px;
+	height: 19px;
+	text-align: center;
+	padding: 3px;
+	vertical-align: middle;
+	margin-top: 15px;
+}
+
+#productGrid #btmOptions .batchAddToCartButton a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#productGrid #btmOptions .batchAddToCartButton a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+#productGrid #btmOptions .pagination {
+	float: right;
+	width: auto;
+	height: 19px;
+	font-size: 12px;
+	padding-top: 15px;
+}
+
+#productGrid #btmOptions .pagination a {
+	color: #C00000;
+	text-decoration: underline;
+}
+
+#productGrid #btmOptions .pagination a:hover {
+	color: #000000;
+	text-decoration: none;
+
+}
+
+#productGrid #btmCategoryPhoto {
+	clear: left;
+	float: left;
+}
+
+#productGrid #btmCategoryPhotoImage {
+	clear: left;
+	float: left;
+}
+
+#productGrid #btmCategoryPhotoCaption {
+	clear: left;
+	float: left;
+}
+
+/* end productGrid */
+
+
+
+
+
+
+
+
+
+/* begin productList */
+/* used in templates/product.grid.tem.php */
+/* only used when a product is displaying a "list" of products */
+
+#productList {
+	text-align: left;
+	margin: 5px;
+	width: 500px;
+}
+
+#productList h2 { }
+
+#productList #categoryDescription {
+	float: left;
+	clear: left;
+	margin-bottom: 10px;
+	border: 1px solid #FFFFFF;
+	width: auto;
+	height: auto;
+}
+
+#productList table{
+	float: left;
+	clear: left;
+}
+
+#productList #topOptions {
+	width: auto;
+	height: 40px;
+	float: left;
+	clear: left;
+}
+
+#productList #topOptions .search {
+	float: left;
+	clear: left;
+	height: 18px;
+}
+
+#productList #topOptions .display {
+	float: left;
+	clear: left;
+	height: 18px;
+}
+
+#productList #topOptions .sort {
+	width: 230px;
+	height: 20px;
+	float: right;
+}
+
+#productList #topOptions .sort .label {
+	float: left;
+	height: 18px;
+	padding: 2px;
+	padding-top: 5px;
+}
+
+#productList #topOptions .sort .option {
+	float: left;
+	height: 18px;
+	padding: 2px;
+}
+
+#productList #topOptions .sort .option select {
+	height: 18px;
+}
+
+#productList .content-even1 {
+	border-bottom: 1px dotted #D9D9D9;
+	text-align: left;
+	vertical-align: top;
+	padding: 8px;
+	margin:	1px;
+	width: 470px;
+}
+
+#productList .content-odd1 {
+	border-bottom: 1px dotted #D9D9D9;
+	text-align: left;
+	vertical-align: top;
+	padding: 8px;
+	margin:	1px;
+	width: 470px;
+}
+
+#productList .title {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	text-align: left;
+	float: left;
+	clear: both;
+	width: 100%;
+}
+
+#productList .title a {
+	color: #C50024;
+	font-size: 14px;
+	text-decoration: underline;
+	font-weight: bold;
+	line-height: 16px;
+}
+
+#productList .title a:hover {
+	text-decoration: none;
+}
+
+#productList .photo {
+	width: 150px;
+	height: auto;
+	float: left;
+	clear: left;
+}
+
+#productList .description {
+	width: 60%;
+	height: auto;
+	float: left;
+	padding: 5px;
+	text-align: left;
+}
+
+#productList .details {
+	width: 60%;
+	height: auto;
+	font-size: 11px;
+	font-weight: normal;
+	float: left;
+	text-align: left;
+	color: #464646;
+}
+
+#productList .details .sprice {
+	width: 40%;
+	float: right;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: left;
+	padding: 8px;
+}
+
+#productList .details .buttons {
+	float: left;
+	clear: left;
+	text-align: left;
+	width: 40%;
+}
+
+#productList .details .buttons .detailBtn {
+	background:url(../design/images/small_btn.gif) no-repeat center center;
+	font-weight: bold;
+	font-size: 10px;
+	float: left;
+	padding-top: 6px;
+	width: 100%;
+	height: 19px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#productList .details .buttons .detailBtnNoImg {
+	font-weight: bold;
+	font-size: 10px;
+	float: left;
+	padding-top: 6px;
+	width: 100%;
+	height: 19px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#productList .details .buttons .detailBtn a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#productList .details .buttons .detailBtn a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+#productList .details .buttons .addToCartBtn {
+	background:url(../design/images/medium_btn.gif) no-repeat center center;
+	font-weight: bold;
+	font-size: 11px;
+	float: left;
+	padding-top: 6px;
+	width: 100%;
+	height: 19px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#productList .details .buttons .addToCartBtnNoImg {
+	font-weight: bold;
+	font-size: 11px;
+	float: left;
+	padding-top: 6px;
+	width: 100%;
+	height: 19px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#productList .details .buttons .addToCartBtn a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#productList .details .buttons .addToCartBtn a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+#productList .details .pricenote {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #C00000;
+	font-weight: bold;
+}
+
+#productList .options {
+	float: left;
+	clear: left;
+	margin-top: 5px;
+	color: #464646;
+	text-align: left;
+	margin-top: 10px;
+}
+
+#productList .options .qty {
+	margin-top: 4px;
+}
+
+#productList .options .qty input {
+	color: #464646;
+}
+
+#productList .options .form-label {
+	width: 25%;
+	text-align: left;
+	padding: 3px;
+}
+
+#productList .options .form-field {
+	text-align: left;
+	width: auto;
+	padding: 0px;
+}
+
+#productList #btmOptions {
+	clear: left;
+	float: left;
+	width: 500px;
+	height: 60px;
+}
+
+#productList #btmOptions .batchAddToCartButton {
+	background:url(../design/images/large_btn.gif) no-repeat;
+	font-weight: bold;
+	font-size: 10px;
+	float: left;
+	width: 158px;
+	height: 19px;
+	text-align: center;
+	padding: 3px;
+	vertical-align: middle;
+	margin-top: 15px;
+}
+
+#productList #btmOptions .batchAddToCartButton a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#productList #btmOptions .batchAddToCartButton a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+#productList #btmOptions .pagination {
+	float: right;
+	width: auto;
+	height: 19px;
+	font-size: 12px;
+	padding-top: 15px;
+}
+
+#productList #btmOptions .pagination a {
+	color: #C00000;
+	text-decoration: underline;
+}
+
+#productList #btmOptions .pagination a:hover {
+	color: #000000;
+	text-decoration: none;
+
+}
+
+#productList #btmCategoryPhoto {
+	clear: left;
+	float: left;
+}
+
+#productList #btmCategoryPhotoImage {
+	clear: left;
+	float: left;
+}
+
+#productList #btmCategoryPhotoCaption {
+	clear: left;
+	float: left;
+}
+
+/* end productList */
+
+
+
+
+
+
+
+
+
+
+
+/* begin productDetail */
+/* used in templates/product.detail.tem.php */
+
+#productDetail{
+	text-align: left;
+	margin: 5px;
+	width: 525px;
+}
+
+#productDetail h2 { }
+
+#productDetail #productPhotos {
+	float: left;
+	clear: left;
+	width: 250px;
+	padding-top: 10px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+#productDetail #prodThumbnails {
+	clear: left;
+}
+
+#productDetail #extraDetails {
+	float: left;
+	clear: none;
+	height: auto;
+	width: 260px;
+	border-collapse: collapse;
+	margin: 0px;
+	padding: 0px 5px 5px 5px;
+	color: #878787;
+}
+
+#productDetail .submitBtn {
+	font-size: 130%;
+	font-weight: bold;
+}
+
+#productDetail #qtyPricing {
+	float: left;
+	border-collapse: collapse;
+	margin-bottom: 15px;
+}
+
+#productDetail #qtyPricing .hdr-title-left {
+	float: left;
+	color: #FFFFFF;
+	background-color: #878787;
+	text-align: left;
+	font-weight: bold;
+	padding: 3px;
+	width: 60px;
+}
+
+#productDetail #qtyPricing .hdr-title-right {
+	float: left;
+	color: #FFFFFF;
+	background-color: #878787;
+	text-align: left;
+	font-weight: bold;
+	padding: 3px;
+	width: 150px;
+}
+
+#productDetail #qtyPricing .list-left {
+	clear: left;
+	float: left;
+	border-bottom: 1px solid #D8DDE3;
+	padding: 3px;
+	width: 60px;
+}
+
+#productDetail #qtyPricing .list-right {
+	float: left;
+	border-bottom: 1px solid #D8DDE3;
+	padding: 3px;
+	width: 150px;
+}
+
+#productDetail #price {
+	font-size: 110%;
+	font-weight: bold;
+}
+
+#productDetail .form-label {
+	font-weight: bold;
+	width: 110px;
+}
+
+#productDetail .form-field { }
+
+#productDetail #customerUpload {
+	margin-top: 15px;
+	clear: left;
+	float: left;
+}
+
+#productDetail #detailGroup {
+	float: left;
+	clear: left;
+}
+
+#productDetail #detailTabs {
+	clear: left;
+	float: left;
+	width: 98%;
+}
+
+#productDetail #detailTabs ul {
+	margin: 0;
+	padding: 10px 10px 0 5px;
+	list-style: none;
+}
+
+#productDetail #detailTabs li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+#productDetail #detailTabs a .current {
+  	color: #FFFFFF;
+  	font-size: 150%;
+}
+
+#productDetail #detailTabs a {
+	float: left;
+	background: url(../design/images/tab-left.gif) no-repeat left top;
+	margin: 0;
+	padding: 0 0 0 5px;
+	text-decoration: none;
+}
+
+#productDetail #detailTabs a span {
+	float: left;
+	display: block;
+	background: url(../design/images/tab-right.gif) no-repeat right top;
+	padding: 5px 10px 5px 3px;
+	color: #404040;
+}
+
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+
+#productDetail #detailTabs a span {
+	float: none;
+}
+
+/* End IE5-Mac hack */
+#productDetail #detailTabs a:hover span {
+  	color: #FFFFFF;
+}
+
+#productDetail #detailTabs a:hover {
+	color: #FFFFFF;
+}
+
+#productDetail #detailTabs a:hover span {
+	color: #FFFFFF;
+}
+
+#productDetail .hdr-title {
+	float: left;
+	color: #FFFFFF;
+	background-color: #878787;
+	text-align: left;
+	font-weight: bold;
+	padding: 5px;
+	width: 98%;
+}
+
+#productDetail .container {
+	clear: both;
+	float: left;
+}
+
+#productDetail .body {
+	clear: left;
+	padding: 5px;
+}
+
+#productDetail #productDescription {
+	margin-top: 15px;
+	float: left;
+	clear: left;
+	width: 485px;
+	height: auto;
+	text-align: left;
+}
+
+#productDetail #productDescription p {
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+}
+
+#productDetail #productReviews {
+	border: 1px solid #404040;
+	width: 485px;
+	float: left;
+	clear: left;
+	height: auto;
+	margin-top: 15px;
+	text-align: left;
+}
+
+#productReviews .body {
+	width: 470px;
+}
+
+#productReviews .form-field {
+	width: 320px;
+}
+
+#productDetail #productReviews #productReviewsAddNote {
+	display: block;
+}
+
+#productDetail #productReviews #productReviewsAdd {
+	display: none;
+}
+
+/* end productDetail */
+
+
+
+
+
+
+
+
+/* begin search form */
+/* used in templates/search.form.tem.php */
+
+#searchForm {
+	text-align: left;
+	width: 500px;
+	margin: 5px;
+}
+
+#searchForm h2 { }
+
+#searchForm #searchFormCategory {
+	float: left;
+}
+
+#searchForm #searchFormCategory .label {
+	float: left;
+	height: 16px;
+}
+
+#searchForm #searchFormCategory .field {
+	float: left;
+	clear: left;
+}
+
+#searchForm #searchFormCategory select {
+	color: #000000;
+}
+
+#searchForm #searchFormVendor, #searchFormShopByPrice {
+	float: left;
+	clear: left;
+	margin-top: 15px;
+}
+
+#searchForm #searchFormVendor .label, #searchFormShopByPrice .label {
+	float: left;
+	height: 16px;
+}
+
+#searchForm #searchFormVendor .field, #searchFormShopByPrice select {
+	float: left;
+	clear: left;
+}
+
+#searchForm #searchFormVendor select, #searchFormShopByPrice select {
+	color: #000000;
+}
+
+#searchForm #searchFormKeywords {
+	float: left;
+	margin-top: 15px;
+}
+
+#searchForm #searchFormKeywords .label {
+	float: left;
+	height: 16px;
+}
+
+#searchForm #searchFormKeywords .field {
+	float: left;
+	clear: left;
+}
+
+#searchForm #searchFormKeywords input {
+	width: 200px;
+	color: #000000;
+}
+
+#searchForm #searchFormSubmit {
+	float: left;
+	clear: left;
+	padding-top: 15px;
+}
+
+#searchForm #searchFormSubmit .button {
+	float: left;
+	font-family: Tahoma;
+	font-size: 11px;
+	line-height: 13px;
+	padding: 1px;
+	margin-bottom: 15px;
+}
+
+/* end search form */
+
+
+
+
+
+
+
+
+
+/* begin registry search form */
+/* used in templates/registry.search.form.tem.php */
+
+#registrySearchForm {
+	text-align: left;
+	width: 500px;
+	margin: 5px;
+}
+
+#registrySearchForm h2 { }
+
+
+#registrySearchForm #searchFormKeywords {
+	float: left;
+}
+
+#registrySearchForm #searchFormKeywords .label {
+	float: left;
+	height: 16px;
+	color: #878787;
+}
+
+#registrySearchForm #searchFormKeywords .field {
+	float: left;
+	clear: left;
+}
+
+#registrySearchForm #searchFormKeywords input {
+	width: 200px;
+	color: #000000;
+}
+
+#registrySearchForm #searchFormSubmit {
+	float: left;
+	padding-top: 15px;
+}
+
+#registrySearchForm #searchFormSubmit .button {
+	float: left;
+	font-family: Tahoma;
+	font-size: 11px;
+	line-height: 13px;
+	color: #5B5B5B;
+	padding: 1px;
+}
+
+/* end registrysearch form */
+
+
+
+
+
+
+
+
+
+/* begin view cart */
+/* used in templates/view.cart.tem.php */
+
+#viewCart {
+	text-align: left;
+	margin: 5px;
+	width: 500px;
+}
+
+#viewCart h2 { }
+
+#viewCart p {
+	height: auto;
+	text-align: left;
+}
+
+#viewCart #pageNote {
+	height: auto;
+	text-align: left;
+}
+
+#viewCart #pageError {
+	border: 1px solid #C00000;
+	padding: 5px;
+	line-height: 20px;
+	font-weight: bold;
+}
+
+#viewCart #cartItems {
+	height: auto;
+	width: 96%;
+	border-collapse: collapse;
+	float: left;
+	clear: left;
+}
+
+#viewCart #cartItems thead tr th {
+	color: #FFFFFF;
+	background-color: #878787;
+	text-align: left;
+	font-weight: bold;
+	height: 22px;
+	font-size: 12px;
+}
+
+#viewCart #cartItems tbody tr td {
+	border-bottom: 1px solid #D8DDE3;
+	text-align: left;
+	font-weight: normal;
+	height: auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#viewCart #cartItems .cartError {
+	background-color: #FF4040;
+}
+
+#viewCart #cartItems .normal {
+	background-color: yellow;
+}
+
+#viewCart #cartItems .cartWarning {
+	background-color: #FFFF80;
+}
+
+
+#viewCart #cartInfo {
+	height: auto;
+	width: 96%;
+	border-collapse: collapse;
+	float: left;
+	clear: left;
+}
+
+#viewCart #cartNumItems {
+	width: 150px;
+	padding-top: 8px;
+	height: 35px;
+	float:left;
+	clear:left;
+	text-align: left;
+}
+
+#viewCart #cartCoupon {
+	height: 35px;
+	width: auto;
+	text-align: left;
+	float:left;
+	clear: left;
+}
+
+#viewCart #cartAmounts {
+	padding-top: 8px;
+	margin-bottom: 8px;
+	float: right;
+	text-align: right;
+}
+
+#viewCart #cartAmounts .field-link {
+	width: 130px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	text-align: right;
+	vertical-align: bottom;
+}
+
+#viewCart #cartAmounts .field-price {
+	text-align: right;
+	font-weight: bold;
+	height: 18px;
+	padding: 2px;
+}
+
+#viewCart #cartAmounts .field-label {
+	text-align: left;
+	height: 18px;
+	clear: left;
+	float: left;
+	padding: 2px;
+}
+
+#viewCart #cartButtons {
+	clear: both;
+	float: left;
+	margin-top: 25px;
+	width: 96%;
+	text-align: left;
+}
+
+#viewCart #gatewayButtonsContainer {
+	width: 500px;
+	height: 50px;
+}
+
+#viewCart #gatewayButtonsContainer .gatewayButtons {
+	float: right;
+	height: 50px;
+}
+
+#viewCart #crossSell {
+	border-top: 1px dotted #D9D9D9;
+	height: auto;
+	width: 96%;
+	border-collapse: collapse;
+	float: left;
+	clear: left;
+	padding-top: 5px;
+	margin-top: 15px;
+}
+
+#viewCart #crossSell .content-even {
+	text-align: center;
+	width: 165px;
+	height: auto;
+	padding-top: 15px;
+}
+
+#viewCart #crossSell .content-odd {
+	text-align: center;
+	width: 165px;
+	height: auto;
+	padding-top: 15px;
+}
+
+#viewCart #crossSell .title {
+	width: 100%;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	text-align: center;
+}
+
+#viewCart #crossSell .title a {
+	color: #C50024;
+	font-size: 12px;
+	text-decoration: underline;
+	font-weight: bold;
+	line-height: 16px;
+}
+
+#viewCart #crossSell .title a:hover {
+	text-decoration: none;
+}
+
+#viewCart #crossSell .photo{
+	text-align: center;
+}
+
+#viewCart #crossSell .details {
+	width: 100%;
+	text-align: center;
+	padding-bottom: 8px;
+}
+
+#viewCart #crossSell .details .detailsBtn {
+	background:url(../design/images/small_btn.gif) no-repeat center center;
+	font-weight: bold;
+	font-size: 11px;
+	height: 22px;
+	margin: 5px;
+	padding-top: 8px;
+	text-align: center;
+}
+
+#viewCart #crossSell .details .detailsBtn a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#viewCart #crossSell .details .detailsBtn a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+/* end view cart */
+
+
+
+
+
+
+
+
+/* begin popupShipping */
+/* used in templates/view.shipping.form.tem.php */
+/* used in templates/view.shipping.results.tem.php */
+
+#popupShipping {
+	text-align: left;
+	margin: 10px;
+}
+
+#popupShipping h2 {
+	width: 300px;
+}
+
+#popupShipping #pageNote{
+	float: left;
+	width: 100%;
+}
+
+#popupShipping #serviceLogo {
+	width: 150px;
+	float: right;
+	padding-left: 15px;
+}
+
+
+/* end popupShipping */
+
+
+
+
+
+
+/* begin checkoutOnePage */
+/* used in templates/checkout.onepage.tem.php */
+
+#checkoutOnePage {
+}
+
+#checkoutOnePage h2 { }
+
+#checkoutOnePage .form-label {
+	font-weight: normal;
+	text-align: left;
+ 	padding: 5px;
+  	width: 20%;
+}
+
+#checkoutOnePage .form-label-required {
+	font-weight: bold;
+	text-align: left;
+ 	padding: 5px;
+  	width: 20%;
+}
+
+#checkoutOnePage .form-label-long {
+	font-weight: normal;
+	text-align: left;
+ 	padding: 5px;
+  	width: 75%;
+}
+
+#checkoutOnePage .form-label-required-long {
+	font-weight: bold;
+	text-align: left;
+ 	padding: 5px;
+  	width: 75%;
+}
+
+#checkoutOnePage #cartItems {
+	height: auto;
+	width: 96%;
+	border-collapse: collapse;
+	float: left;
+	clear: left;
+}
+
+#checkoutOnePage #cartItems thead tr th {
+	color: #FFFFFF;
+	background-color: #878787;
+	text-align: left;
+	font-weight: bold;
+	height: 22px;
+	font-size: 12px;
+}
+
+#checkoutOnePage #cartItems tbody tr td {
+	border-bottom: 1px solid #D8DDE3;
+	text-align: left;
+	font-weight: normal;
+	height: auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#checkoutOnePage #cartItems .cartError {
+	background-color: #FF4040;
+}
+
+#checkoutOnePage #cartItems .normal {
+	background-color: yellow;
+}
+
+#checkoutOnePage #cartItems .cartWarning {
+	background-color: #FFFF80;
+}
+
+#checkoutOnePage #cartInfo {
+	height: auto;
+	width: 96%;
+	float: left;
+	clear: left;
+}
+
+#checkoutOnePage #cartAmounts {
+	padding-top: 8px;
+	width: 145px;
+	float: right;
+}
+
+#checkoutOnePage #cartAmounts .field-link {
+	width: 130px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	text-align: right;
+	vertical-align: bottom;
+}
+
+#checkoutOnePage #cartAmounts .field-price {
+	text-align: right;
+	font-weight: bold;
+	height: 18px;
+	padding: 2px;
+}
+
+#checkoutOnePage #cartAmounts .field-label {
+	text-align: left;
+	height: 18px;
+	clear: left;
+	float: left;
+	padding: 2px;
+}
+
+#checkoutOnePage #checkoutWelcome {
+}
+
+#checkoutOnePage #existingCustomer {
+}
+
+#checkoutOnePage #existingCustomer .hdr-title{
+}
+
+#checkoutOnePage #existingCustomer .body {
+}
+
+#checkoutOnePage #newCustomer {
+}
+
+#checkoutOnePage #newCustomer .hdr-title{
+}
+
+#checkoutOnePage #newCustomer .body {
+}
+
+#checkoutOnePage #billAddress {
+	clear: left;
+	float: left;
+	margin-top: 15px;
+	border-top: 1px solid #D8DDE3;
+  	padding: 4px;
+  	width: 96%;
+}
+
+#checkoutOnePage #billAddress table {
+  	text-align: left;
+  	padding: 4px;
+  	width: 100%;
+}
+
+#checkoutOnePage #shipAddress {
+	clear: left;
+	float: left;
+	margin-top: 15px;
+	border-top: 1px solid #D8DDE3;
+  	padding: 4px;
+  	width: 96%;;
+}
+
+#checkoutOnePage #shipAddress table {
+  	text-align: left;
+  	padding: 4px;
+  	width: 100%;
+}
+
+#checkoutOnePage #shipMethod {
+	clear: left;
+	float: left;
+	margin-top: 15px;
+	border-top: 1px solid #D8DDE3;
+  	padding: 4px;
+  	width: 96%;
+}
+
+#checkoutOnePage #shipMethod table {
+  	text-align: left;
+  	padding: 4px;
+  	width: 100%;
+}
+
+#checkoutOnePage #shipMethod table .multiShipOptions {
+	width: 180px;
+}
+
+#checkoutOnePage #paymentInfo {
+	clear: left;
+	float: left;
+	margin-top: 15px;
+	border-top: 1px solid #D8DDE3;
+  	padding: 4px;
+  	width: 96%;
+}
+
+#checkoutOnePage #paymentInfo table {
+  	text-align: left;
+  	padding: 4px;
+  	width: 100%;
+}
+
+#checkoutOnePage #totalsInfo {
+	clear: left;
+	float: left;
+	margin-top: 15px;
+	border-top: 1px solid #D8DDE3;
+}
+
+#checkoutOnePage #totalsInfo {
+  	text-align: left;
+  	padding: 4px;
+  	width: 96%;
+}
+
+#checkoutOnePage #totalsInfo .totalLabel {
+	text-align: right;
+	font-weight: bold;
+	font-size: 125%;
+	width: 125px;
+	padding: 4px;
+}
+
+#checkoutOnePage #totalsInfo .totalField {
+	text-align: left;
+	font-size: 125%;
+	width: auto;
+	padding: 4px;
+}
+
+#checkoutOnePage #totalsInfo #grand_total_div {
+	font-size: 125%;
+	font-weight: bold;
+	height: 28px;
+	color: #878787;
+	width: auto;
+}
+
+#checkoutOnePage #checkoutSubscription {
+	clear: left;
+	float: left;
+	margin-top: 15px;
+	border-top: 1px solid #D8DDE3;
+  	padding: 4px;
+  	width: 96%;
+}
+
+#checkoutOnePage #checkoutSubscription table {
+  	text-align: left;
+  	padding: 4px;
+  	width: 100%;
+}
+
+/* end checkoutOnePage */
+
+
+
+
+
+
+
+
+/* begin checkoutBilling */
+/* used in templates/checkout.billing.form.tem.php */
+
+#checkoutBilling {
+	text-align: left;
+	width: 500px;
+	margin: 5px;
+}
+
+#checkoutBilling .form-label { }
+
+#checkoutBilling .form-label-required { }
+
+#checkoutBilling .form-field { }
+
+/* end checkoutBilling */
+
+
+
+
+
+
+
+
+
+/* begin checkoutShipping */
+/* used in templates/checkout.shipping.form.tem.php */
+
+#checkoutShipping {
+	text-align: left;
+	width: 500px;
+	margin: 5px;
+}
+
+#checkoutShipping .form-label { }
+
+#checkoutShipping .form-label-required { }
+
+#checkoutShipping .form-field { }
+
+/* end checkoutShipping */
+
+
+
+
+
+
+
+
+
+/* begin checkoutPayment */
+/* used in templates/checkout.payment.form.tem.php */
+
+#checkoutPayment {
+	text-align: left;
+	width: 500px;
+	margin: 5px;
+}
+
+#checkoutPayment .form-label { }
+
+#checkoutPayment .form-field { }
+
+#checkoutPayment #paymentOpts { }
+
+#checkoutPayment #paymentOpts .form-label {
+	height: auto;
+}
+
+#checkoutPayment #paymentOpts .form-field {
+  	padding: 4px;
+	height: auto;
+	float: left;
+}
+
+#checkoutPayment #spacer {
+	clear: left;
+	float: left;
+}
+
+#checkoutPayment .pageNote {
+	clear:left;
+	float: left;
+	margin: 5px;
+}
+
+/* end checkoutPayment */
+
+
+
+
+
+
+
+
+
+/* begin checkoutSubscription */
+/* used in templates/checkout.subscription.form.tem.php */
+
+#checkoutSubscription {
+	text-align: left;
+	width: 500px;
+	margin: 5px;
+}
+
+#checkoutSubscription .form-label {
+  	clear: left;
+  	float: left;
+  	text-align: left;
+  	padding: 4px;
+  	width: 100%;
+}
+
+#checkoutSubscription .form-field {
+	clear: left;
+  	padding: 4px;
+	height: auto;
+	float: left;
+	width: 100%;
+}
+
+#checkoutSubscription #spacer {
+	clear: left;
+	float: left;
+}
+
+/* end checkoutSubscription */
+
+
+
+
+
+
+
+
+/* begin checkoutConfirm */
+/* used in templates/checkout.confirm.tem.php */
+
+#checkoutConfirm {
+	text-align: left;
+	width: 500px;
+	margin: 5px;
+}
+
+#checkoutConfirm h2 { }
+
+#checkoutConfirm #billInfo {
+	margin: 5px;
+	border: 1px solid #D8DDE3;
+	float: left;
+	clear: left;
+	text-align: left;
+}
+
+#checkoutConfirm #shipInfo {
+	margin: 5px;
+	border: 1px solid #D8DDE3;
+	float: left;
+	text-align: left;
+}
+
+#checkoutConfirm #paymentInfo {
+	margin: 5px;
+	border: 1px solid #D8DDE3;
+	height: auto;
+	clear: both;
+	float: left;
+	text-align: left;
+}
+
+#checkoutConfirm #orderDetails {
+	margin: 5px;
+	float: left;
+	clear: left;
+	border: 1px solid #D8DDE3;
+	width: 470px;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+#checkoutConfirm #orderDetails .list {
+	border: 1px solid #D8DDE3;
+	height: 22px;
+}
+
+#checkoutConfirm .hdr-title {
+	color: #FFFFFF;
+	background-color: #878787;
+	text-align: left;
+	padding: 5px;
+	font-weight: bold;
+}
+
+#checkoutConfirm .body {
+	padding: 5px;
+}
+
+.submitBtn {
+	font-size: 130%;
+	font-weight: bold;
+}
+
+.submitOrder {
+	width: 470px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.pageNote {
+	margin: 5px;
+	text-align: left;
+}
+
+/* end checkoutConfirm */
+
+
+
+
+
+
+
+
+/* begin checkoutComplete */
+/* used in templates/checkout.complete.tem.php */
+
+#checkoutComplete {
+	text-align: left;
+	width: 500px;
+	margin: 5px;
+}
+
+#checkoutComplete .container {
+	padding: 0px;
+	margin: 0px;
+	width: auto;
+}
+
+#checkoutComplete .container2 {
+	padding: 0px;
+	margin: 0px;
+	width: auto;
+}
+
+#checkoutComplete #pageNote {
+	margin-top: 10px;
+	width: auto;
+	height: auto;
+}
+
+#checkoutComplete #downloadFiles {
+	margin-top: 10px;
+	height: 35px;
+}
+
+#checkoutComplete #downloadFiles input {
+	font-size: 120%;
+	font-weight: bold;
+}
+
+#checkoutComplete .hdr-title {
+	font-size: 105%;
+	font-weight: bold;
+	line-height: 20px;
+}
+
+#checkoutComplete .container input {
+	margin-bottom: 100px;
+}
+
+/* end checkoutComplete */
+
+
+
+
+
+
+
+/* begin clientAccount */
+/* used in all the client "my account" templates */
+/* templates/client.*.tem.php */
+
+#clientAccount {
+	text-align: left;
+	width: 500px;
+	margin: 5px;
+}
+
+#clientAccount h2 { }
+
+#clientAccount .section {
+	height: 40px;
+	float: left;
+	clear: left;
+	width: 65%;
+}
+
+#clientAccount .logout {
+	height: 40px;
+	float: right;
+	vertical-align: bottom;
+}
+
+#clientAccount .logout a {
+	padding-right:12px;
+}
+
+#clientAccount .logout a:hover { }
+
+#clientAccount #billInfo a {
+	/* color: #FFFFFF; */
+}
+
+#clientAccount #shipInfo {
+}
+
+#clientAccount #shipInfo a {
+	/* color: #FFFFFF; */
+}
+
+#clientAccount #paymentInfo {
+
+}
+
+#clientAccount #subscriptionBillInfo {
+	margin: 5px;
+	border: 1px solid #D8DDE3;
+	float: left;
+	clear: left;
+	text-align: left;
+}
+
+#clientAccount #subscriptionShipInfo {
+	margin: 5px;
+	border: 1px solid #D8DDE3;
+	text-align: left;
+	float: left;
+}
+
+#clientAccount #subscriptionPaymentInfo {
+	margin: 5px;
+	border: 1px solid #D8DDE3;
+	height: auto;
+	width: 230px;
+	float: left;
+	clear: left;
+	text-align: left;
+}
+
+#clientAccount #orderDetails {
+	margin: 5px;
+	float: left;
+	clear: left;
+	border: 1px solid #D8DDE3;
+	width: 470px;
+	border-collapse: collapse;
+}
+
+#clientAccount #orderDetails .list {
+	border: 1px solid #D8DDE3;
+	height: 22px;
+}
+
+#clientAccount .hdr-title {
+	color: #FFFFFF;
+	background-color: #878787;
+	text-align: left;
+	padding:5px;
+	font-weight: bold;
+}
+
+#clientAccount .body {
+	padding: 5px;
+}
+
+#clientAccount #orderList .title, #clientAccount #subscriptionOrderList .title {
+	text-align: left;
+	margin: 5px;
+}
+
+#clientAccount #orderList, #clientAccount #subscriptionOrderList {
+	border: 1px solid #D8DDE3;
+	border-collapse: collapse;
+	padding: 0;
+	margin: 0;
+	float: left;
+	width: 100%;
+}
+
+#clientAccount #orderList thead th, #clientAccount #subscriptionOrderList thead th {
+	color: #FFFFFF;
+	background-color: #878787;
+	text-align: left;
+	vertical-align: middle;
+	padding: 3px;
+	height: 25px;
+}
+
+#clientAccount #orderList tbody tr td, #clientAccount #subscriptionOrderList tbody tr td {
+	border-top: 1px solid #D8DDE3;
+	padding: 3px;
+	text-align: left;
+}
+
+#clientAccount #orderList .buttons, #clientAccount #subscriptionOrderList .buttons {
+	text-align: right;
+}
+
+#clientAccount #orderList thead tr th a, #clientAccount #subscriptionOrderList thead tr th a {
+	color: #FFFFFF;
+}
+
+#clientAccount #orderList thead tr th a:hover, #clientAccount #subscriptionOrderList thead tr th a:hover {
+	color: #FFFFFF;
+}
+
+#clientAccount #orderList, #clientAccount #subscriptionOrderList {
+	margin: 5px;
+	float: left;
+	border: 1px solid #D8DDE3;
+	height: auto;
+	width: 96%;
+	text-align: left;
+}
+
+#clientAccount #orderList table, #clientAccount #subscriptionOrderList table {
+	width: 100%;
+	margin: 5px;
+	border-collapse: collapse;
+	border-top: 1px solid #D8DDE3;
+	text-align: left;
+}
+
+#clientAccount #orderList table thead th, #clientAccount #subscriptionOrderList table thead th {
+	text-align: left;
+	font-weight: bold;
+}
+
+#clientAccount #orderList table tbody, #clientAccount #orderList table tbody tr td, #clientAccount #subscriptionOrderList table tbody, #clientAccount #subscriptionOrderList table tbody tr td {
+	text-align: left;
+	border-bottom: 1px solid #D8DDE3;
+	border-top: 1px solid #D8DDE3;
+	padding: 2px;
+}
+
+#clientAccount #orderList .outOfStock {
+	background-color: #FF4040;
+}
+
+#clientAccount #orderList .exceedingStock {
+	background-color: #FFFF80;
+}
+
+#clientAccount #myAccount {
+	margin: 5px;
+	border: 1px solid #D8DDE3;
+	height: auto;
+	width: 250px;
+	float: left;
+	text-align: left;
+}
+
+#clientAccount #pageNote, #clientAccount .pageNote {
+	text-align: left;
+	clear: left;
+	font-size: 11px;
+}
+
+#clientAccount #clientAccount .body { }
+
+#clientAccount .all-link {
+	margin: 5px;
+}
+
+#clientAccount .links {
+	float: right;
+	padding-top: 15px;
+	padding-right: 15px;
+}
+
+#clientAccount .buttons {
+	clear: left;
+	float: left;
+	padding-top: 15px;
+	padding-left: 3px;
+	width: 100%;
+}
+
+#clientAccount #otherStats { }
+
+#clientAccount .points {
+	padding-left: 3px;
+	clear: left;
+	float: left;
+}
+
+#clientAccount .pagination {
+	float: right;
+	padding-left: 3px;
+	padding-top: 13px;
+	height: 22px;
+	width: auto;
+}
+
+#clientAccount .pagination a {
+	color: #C00000;
+	text-decoration: underline;
+}
+
+#clientAccount .pagination a:hover {
+	color: #000000;
+	text-decoration: none;
+}
+
+#clientAccount .myerror {
+	clear: left;
+	float: left;
+}
+
+#clientAccount .adminFile {
+	float: left;
+	clear: left;
+	margin-left: 5px;
+	margin-top: 10px;
+}
+
+#clientAccount #outOfStock {
+	float: left;
+	clear: left;
+	color: #FF0000;
+}
+
+#clientAccount #exceedingStock {
+	float: left;
+	clear: left;
+	color: #FF0000;
+}
+
+#clientAccount hr {
+	clear: left;	
+}
+/* end clientAccount */
+
+
+
+
+
+
+
+/* begin vendorLogin */
+/* used in templates/vendor.login.tem.php */
+/* used in templates/vendor.login.password.tem.php */
+
+#vendorLogin {
+	text-align: left;
+	width: 500px;
+	margin:5px;
+}
+
+#vendorLogin h2 { }
+
+#vendorLogin #pageNote {
+	height: 25px;
+}
+
+#vendorLogin .form-label { }
+
+#vendorLogin .form-field { }
+
+/* end vendorLogin */
+
+
+
+
+
+
+
+
+/* begin vendorAccount */
+
+#vendorAccount {
+	text-align: left;
+	margin: 5px;
+	width: 500px;
+}
+
+#vendorAccount h2 {
+	width: 350px;
+}
+
+#vendorAccount hr {
+	float: left;
+	clear: left;
+}
+
+#vendorAccount .vendorlink {
+	color: #FFFFFF;
+}
+
+#vendorAccount .pagination {
+	width: 475px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#vendorAccount #pageNote {
+	height: 25px;
+}
+
+#vendorAccount .myerror {
+	float: left;
+	clear: left;
+	line-height: 5px;
+}
+
+#vendorAccount .section {
+	height: 40px;
+	float: left;
+	clear: left;
+	width: 50%;
+}
+
+#vendorAccount .logout {
+	height: 40px;
+	float: right;
+	vertical-align: bottom;
+}
+
+#vendorAccount .logout a { }
+
+#vendorAccount .logout a:hover { }
+
+#vendorAccount #billInfo {
+	margin: 5px;
+	height: 160px;
+	width: 470px;
+	float: left;
+	clear: left;
+}
+
+#vendorAccount #orderDetails {
+	margin: 5px;
+	float: left;
+	clear: left;
+	border: 1px solid #D8DDE3;
+	width: 470px;
+	border-collapse: collapse;
+}
+
+#vendorAccount #orderDetails .list {
+	border: 1px solid #D8DDE3;
+	height: 22px;
+}
+
+#vendorAccount .hdr-title {
+	color: #FFFFFF;
+	background-color: #878787;
+	text-align: left;
+	padding:5px;
+	font-weight: bold;
+}
+
+#vendorAccount .body {
+	padding: 5px;
+}
+
+#vendorAccount #myAccount {
+	margin: 5px;
+	border: 1px solid #D8DDE3;
+	height: auto;
+	width: 250px;
+	float: left;
+	text-align: left;
+}
+
+#vendorAccount #orderList .title {
+	margin: 5px;
+}
+
+#vendorAccount #orderList {
+	border: 1px solid #D8DDE3;
+	border-collapse: collapse;
+	padding: 0;
+	margin: 0;
+	float: left;
+	width: 100%;
+}
+
+#vendorAccount #orderList thead th {
+	color: #FFFFFF;
+	background-color: #878787;
+	text-align: left;
+	vertical-align: middle;
+	padding: 3px;
+	height: 25px;
+}
+
+#vendorAccount #orderList tbody tr td {
+	border-top: 1px solid #D8DDE3;
+	padding: 3px;
+}
+
+#vendorAccount #orderList .buttons {
+	text-align: right;
+}
+
+#vendorAccount #orderList thead tr th a {
+	color: #FFFFFF;
+}
+
+#vendorAccount #orderList thead tr th a:hover {
+	color: #FFFFFF;
+}
+
+#vendorAccount #orderList {
+	margin: 5px;
+	float: left;
+	border: 1px solid #D8DDE3;
+	height: auto;
+	width: 96%;
+}
+
+#vendorAccount #orderList table {
+	width: 100%;
+	margin: 5px;
+	border-collapse: collapse;
+	border-top: 1px solid #D8DDE3;
+}
+
+#vendorAccount #orderList table thead th {
+	text-align: left;
+	font-weight: bold;
+}
+
+#vendorAccount #orderList table tbody, #vendorAccount #orderList table tbody tr td {
+	text-align: left;
+	border-bottom: 1px solid #D8DDE3;
+	border-top: 1px solid #D8DDE3;
+	padding: 2px;
+}
+
+#vendorAccount .buttons {
+	clear: left;
+	float: left;
+	padding-top: 5px;
+	padding-left: 3px;
+}
+
+#vendorAccount #billInfo { }
+
+#vendorAccount #otherStats { }
+
+#vendorAccount .large {
+	font-size: 125%;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#vendorAccount .productActionButtons {
+	clear: both;
+	float: right;
+}
+
+#vendorAccount .productActionOptions {
+	float: left;
+}
+
+#vendorAccount #productList {
+	margin: 5px;
+	float: left;
+	clear: left;
+}
+
+#vendorAccount #productList thead tr th {
+	color: #FFFFFF;
+	background-color: #878787;
+	text-align: left;
+	padding: 5px;
+	font-weight: bold;
+}
+
+#vendorAccount #productList thead tr td { }
+
+#vendorAccount #vendorTabs {
+	margin: 5px;
+	float: left;
+	clear: left;
+}
+
+#vendorAccount #vendorTabs .tabs-on {
+	margin: 5px;
+	font-weight: bold;
+	float: left;
+}
+
+#vendorAccount #vendorTabs .tabs-off {
+	margin: 5px;
+	float: left;
+}
+
+#vendorAccount .vendorTable {
+	float: left;
+	clear: left;
+}
+/* end vendorAccount */
+
+
+
+
+
+
+
+
+/* start registryList */
+/* used in templates/registry.list.tem.php */
+
+#registryList {
+	width: 500px;
+	margin: 5px;
+	text-align: left;
+}
+
+#registryList .content-even {
+	border-bottom: 1px dotted #D9D9D9;
+	text-align: center;
+	vertical-align: top;
+	padding: 8px;
+	margin:	1px;
+	width: 460px;
+}
+
+#registryList .content-odd {
+	border-bottom: 1px dotted #D9D9D9;
+	text-align: center;
+	vertical-align: top;
+	padding: 8px;
+	margin:	1px;
+	width: 460px;
+}
+
+#registryList .title {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	text-align: left;
+	float: left;
+	clear: both;
+}
+
+#registryList #registryListResults{
+	float: left;
+	clear: left;
+}
+
+/* end registryList */
+
+
+
+/* begin posCheckoutComplete */
+/* used in templates/checkout.complete.tem.php */
+
+#posCheckoutComplete {
+	width: 215px;
+	text-align: center;
+}
+
+
+#posCheckoutComplete .addressElement {
+	clear: left;
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+}
+
+#posCheckoutComplete .invoiceInfo {
+	padding-top: 15px;
+	float: left;
+	text-align: left;
+	height: auto;
+}
+
+#posCheckoutComplete .cartItemInfo {
+	clear: left;
+	float: left;
+	text-align: left;
+	padding-top: 5px;
+	width: 100%;
+	height: auto;
+}
+
+#posCheckoutComplete .cartItemPrice {
+	float: right;
+}
+
+#posCheckoutComplete .cartTotals {
+	clear: left;
+	width: 100%;
+	padding-top: 5px;
+	height: auto;
+}
+
+#posCheckoutComplete .cartTotalsRow {
+	vertical-align: middle;
+	height: auto;
+	width: 100%;
+}
+
+#posCheckoutComplete .cartTotalsHeader {
+	clear: left;
+	float: left;
+	width: 69%;
+	text-align: right;
+	height: 100%;
+}
+
+#posCheckoutComplete .cartTotalsValue {
+	clear: none;
+	float: right;
+	width: 29%;
+	text-align: right;
+	height: 100%;
+}
+
+#posCheckoutComplete .tagElement {
+	clear: left;
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+	padding-top: 15px;
+}
+
+/* end checkoutComplete */
+
+
+.blurb {
+	clear: left;
+	float: left;
+}
+
+h2 {
+	clear: left;
+}
