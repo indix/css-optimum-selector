@@ -5,8 +5,7 @@
   "main": "lib/index.js",
   "repository": "https://github.com/manishwaran/css-selector.git",
   "scripts": {
-    "test": "mocha --opts ./mocha.opts",
-    "test:watch": "mocha --compilers jsx?:babel-core/register test/index.js",
+    "test": "mocha --compilers jsx?:babel-core/register test/index.js",
     "build:watch": "babel src --out-dir lib --watch",
     "build": "babel src --out-dir lib"
   },
