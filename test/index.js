@@ -5,13 +5,12 @@ import * as CRS from '../src';
 
 const html = fs.readFileSync('./test/stub/index.html', 'utf8')
 
-describe('Css relative selector test', () => {
+describe('Css selector test', () => {
   it('should find common parent', (done) => {
     const $ = cheerio.load(html);
-    const ele1 = $('div#productsRelated > div:nth-child(3) > div.content-odd > div.details > div.sprice > span.myerror');
-    const ele2 = $('div#productsRelated > div:nth-child(2) > div.content-even > div.details > div.sprice > span.myerror');
+    const ele1 = $('div#extraDetails > div:nth-child(5) > div.form-field');
+    const ele2 = $('div#extraDetails > div:nth-child(3) > div.form-field');
     const par = CRS.checkCommonParent(ele1, ele2);
-    // console.log(par.html());
     expect(par.attr('id')).to.be.equal('extraDetails');
     done();
   });
@@ -20,7 +19,7 @@ describe('Css relative selector test', () => {
     const $ = cheerio.load(html);
     const ele1 = $('div#extraDetails > div:nth-child(5) > div.form-field');
     const relation = CRS.nthChildStr(ele1);
-    expect(relation).to.be.equal('div:nth-child(1)')
+    expect(relation).to.be.equal('div:nth-child(2)')
     done();
   });
 
@@ -35,20 +34,20 @@ describe('Css relative selector test', () => {
 
   it('should return relative path ', (done) => {
     const $ = cheerio.load(html);
-    const ele1 = $('div#productsRelated > div:nth-child(2) > div.content-odd > div.details > div.sprice > span.myerror');
-    const ele2 = $('div#productsRelated > div:nth-child(2) > div.content-even > div.details > div.sprice > span.myerror');
+    const ele1 = $('div#extraDetails > div:nth-child(5) > div.form-field');
+    const ele2 = $('div#extraDetails > div:nth-child(3) > div.form-field');
     const relativePath = CRS.getCommonSelector(ele1, ele2, $);
-    console.log(relativePath);
-    expect(relativePath).to.be.equal('div#extraDetails * div:nth-child(1)');
+    expect(relativePath).to.be.equal('div#extraDetails * div:nth-child(2)');
     done();
   });
 
-  it('should return false', (done) => {
+  it('should return have required nodes on using relative path', (done) => {
     const $ = cheerio.load(html);
-    const ele1 = $('div#productDescription > div.body > ul');
-    const ele2 = $('div.body > p:nth-child(1)');
-    const relativePath = CRS.cssPath(ele1, $);
-    expect(relativePath).to.be.equal(false);
+    const ele1 = $('div#productsRelated > div:nth-child(2) > div.content-odd > div.details > div.sprice > span.myerror');
+    const ele2 = $('div#productsRelated > div:nth-child(3) > div.content-odd > div.details > div.sprice > span.myerror');
+    const relativePath = CRS.getCommonSelector(ele1, ele2, $);
+    expect($(relativePath).length).to.be.equal(5);
     done();
   });
+
 });
