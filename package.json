@@ -1,5 +1,5 @@
 {
-  "name": "css-rel-selector",
+  "name": "css-selector",
   "version": "1.0.0",
   "description": "Module for finding relative css-selector",
   "main": "lib/index.js",
@@ -10,7 +10,11 @@
     "build": "babel src --out-dir lib"
   },
   "keywords": [
-    "css-rel-selector"
+    "css-selector",
+    "css-extractor",
+    "css selector",
+    "manishwaran",
+    "css selection"
   ],
   "author": "Manish",
   "license": "ISC",
