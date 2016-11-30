@@ -59,13 +59,4 @@ describe('Css selector test', () => {
     done();
   });
 
-  it('should return relative path ', (done) => {
-    const $ = cheerio.load(html);
-    const ele1 = $('div#productDescription > div.body > ul > li:nth-child(1)');
-    const ele2 = $('div#productDescription > div.body > ul > li:nth-child(5)');
-    const relativePath = CRS.getCommonSelector(ele1, ele2, $);
-    console.log(relativePath);
-    expect(relativePath).to.be.equal('div#extraDetails * div:nth-child(2)');
-    done();
-  });
 });

@@ -1,7 +1,7 @@
 import cssPath from './css-path';
 
 const checkCommonParent = (a,b) => {
-  // if (!a.length || !b.length) return null;
+  if (!a.length || !b.length) return null;
   return a.is(b) ? a : checkCommonParent(a.parent(), b.parent());
 }
 const nthChildStr = (ele) => {
