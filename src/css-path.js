@@ -43,14 +43,14 @@ const cssPathHelper = (elm, $, list) => {
     selector.push(`#${id.trim()}`);
   }
   if (className) selector.push(classSelector(className));
-  if (tag !== 'html' && tag !== 'body' && elm.parentNode) {
+  if (tag !== 'html' && tag !== 'body' && elm.parent()) {
     list.unshift(selector.join(''));
-    const isUniqueToParent = $(elm.parentNode).find(cssPathToString(list)).length === 1;
+    const isUniqueToParent = elm.parent().find(cssPathToString(list)).length === 1;
     if (!isUniqueToParent) {
       list.shift();
       list.unshift(selector.join(''), nthChild(elm));
     }
-    if (!isUnique(list)) return cssPathHelper(elm.parentNode, $, list);
+    if (!isUnique(list)) return cssPathHelper(elm.parent(), $, list);
   }
   return list;
 };
