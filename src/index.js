@@ -1,7 +1,7 @@
 import cssPath from './css-path';
 
 const checkCommonParent = (a,b) => {
-  if (!a.length || !b.length) return null;
+  // if (!a.length || !b.length) return null;
   return a.is(b) ? a : checkCommonParent(a.parent(), b.parent());
 }
 const nthChildStr = (ele) => {
@@ -19,7 +19,7 @@ const childToParentTraversal = (child, par, path=[]) => {
   return path;
 }
 
-const checkCommonPath = (path1, path2) => path1 && path1 === path2;
+const checkCommonPath = (path1, path2) => path1 !== null && path1 === path2;
 
 const getCommonSelector = (ele1, ele2, $) => {
   const commonParent = checkCommonParent(ele1, ele2);
