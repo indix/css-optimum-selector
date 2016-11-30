@@ -27,7 +27,7 @@ const getCommonSelector = (ele1, ele2, $) => {
   const ele1Path = childToParentTraversal(ele1, commonParent).slice(1).join(' > ');
   const ele2Path = childToParentTraversal(ele2, commonParent).slice(1).join(' > ');
   if (checkCommonPath(ele1Path, ele2Path)) {
-    const path = cssPath(commonParent, $);
+    const path = cssPath(commonParent.get(0), $);
     const commonSelector = `${path} * ${ele1Path}`;
     return commonSelector;
   }
