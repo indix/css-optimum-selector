@@ -1,5 +1,5 @@
 {
-  "name": "css-optimum-generator",
+  "name": "css-optimum-selector",
   "version": "1.0.0",
   "description": "Module for finding relative css-selector",
   "main": "lib/index.js",
