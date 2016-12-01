@@ -15,6 +15,7 @@ export default class CssTraversalHelper extends CssCheckListHelper {
   }
 
   isUniqueInDocument(element, path) {
+    console.log('\n', path);
     const root = element.closest(this.root)
     return root.find(path).length === 1
   }
@@ -23,28 +24,24 @@ export default class CssTraversalHelper extends CssCheckListHelper {
     let str = `${element.prop('tagName').toLowerCase()}:nth-child(`;
     element.parent().children().each((idx, child) => {
       if(element.is(child)) str+=`${idx+1})`;
-    })
+    });
     return str;
   }
 
-  formPriorityArray(checkList) {
-    this.priority.reduce((pre, cur) => pre.concat(composePathStringHelper(cur, checkList[cur])), [])
-  }
-
-  checkUniqueInParent(priorityArray, path) {
-    let temPath = path
+  checkUniqueInParent(priorityArray, path, $) {
+    let temPath = ''
     for(let i=0; i<priorityArray.length; i++) {
       for(let j=i; j<priorityArray.length; j++) {
-        const newPath = `${temPath}${priorityArray[j]}`
-        const result = this.isUniqueToParent(element, newPath) && newPath
+        const newPath = `${temPath}${priorityArray[j]} ${path}`
+        const result = this.isUniqueToParent($(newPath), newPath) && newPath
         if (result) return result
       }
-      temPath += priorityArray[i]
+      temPath = `${priorityArray[i]}${temPath}`
     }
     return false
   }
 
-  checkCommonParent(elm1, elm2) => {
+  checkCommonParent(elm1, elm2) {
     if (!elm1.length || !elm2.length) return null
     return elm1.is(elm2) ? elm1 : this.checkCommonParent(elm1.parent(), elm2.parent())
   }
@@ -58,6 +55,10 @@ export default class CssTraversalHelper extends CssCheckListHelper {
 
   checkCommonPath(path1, path2){
     path1 !== null && path1 === path2
+  }
+
+  formPriorityArray(checkList) {
+    return Object.keys(checkList).reduce((pre, cur) => pre.concat(this.composePathStringHelper(cur, checkList[cur])), [])
   }
 
 }

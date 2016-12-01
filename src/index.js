@@ -1,25 +1,28 @@
-import CssOptimumSelectorHelper from './css-optimum-selector-helper'
+import CssOptimumSelectorHelper from './css-traversal-helper'
 
 export default class CssOptimumSelector extends CssOptimumSelectorHelper {
 
   constructor(props) {
     super(props)
     this.cssPath = this.cssPath.bind(this)
+    this.uniqueCssSelector = this.uniqueCssSelector.bind(this)
+    this.getCommonSelector = this.getCommonSelector.bind(this)
   }
 
-  cssPath(element, path = '') {
-    if (path && isUniqueInDocument(path)) return path
-    const checkList = getCheckList(element)
-    const filteredCheckList = getFilteredCheckList(checkList)
+  cssPath(element, $, path = '') {
+    if (path && this.isUniqueInDocument(element, path)) return path
+    const checkList = this.getCheckList(element)
+    const filteredCheckList = this.getFilteredCheckList(checkList)
     const priorityArray = this.formPriorityArray(filteredCheckList)
-    const result = this.checkUniqueInParent(priorityArray, path)
-    const parentPath = path ? `${path} > ` : ''
-    if (result) return cssPath(element.parent(), `${parentPath}${result}`)
-    return cssPath(element.parent(), `${parentPath}${this.nthChildStr(element)}`)
+    const result = this.checkUniqueInParent(priorityArray, path, $)
+    const parentPath = path ? ` > ${path}` : ''
+    // console.log(`${result}${parentPath}`);
+    if (result) return this.cssPath(element.parent(), $, `${result}${parentPath}`,)
+    return this.cssPath(element.parent(), $, `${this.nthChildStr(element)}${parentPath}`)
   }
 
-  uniqueCssSelector(element) {
-    return this.cssPath($(element))
+  uniqueCssSelector(element, $) {
+    return this.cssPath($(element), $)
   }
 
   getCommonSelector(firstElement, secondElement) {
@@ -33,5 +36,9 @@ export default class CssOptimumSelector extends CssOptimumSelectorHelper {
       return commonSelector;
     }
     return false;
+  }
+
+  commonSelector(firstElement, secondElement) {
+    return getCommonSelector($(firstElement), $(secondElement))
   }
 }

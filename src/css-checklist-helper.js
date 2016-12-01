@@ -3,33 +3,30 @@ import defaultProps from './defaults'
 export default class CssCheckList {
 
   constructor(props) {
-    this.ignore = props.ignore || null
-    this.ignoreFunc = props.ignoreFunc || null
-    this.root = props.root || 'html'
-    this.priority = props.priority || defaultProps.priority
-    this.relativeDepth = props.relativeDepth || defaultProps.relativeDepth
-  }
-
-  getFuncForCheckList(element) {
-    const funcCheckList = {}
-    this.priority.forEach((checkList) => {
-      if (checkList === 'tag') funcCheckList[checkList] = $(element).prop
-      else funcCheckList[checkList] = $(element).attr
-    })
-    return funcCheckList
+    this.ignore = (props && props.ignore) || null
+    this.ignoreFunc = (props && props.ignoreFunc) || null
+    this.root = (props && props.root) || 'html'
+    this.priority = (props && props.priority) || defaultProps.priority
+    this.relativeDepth = (props && props.relativeDepth) || defaultProps.relativeDepth
   }
 
   getCheckList(element) {
-    const funcCheckList = this.getFuncForCheckList(element)
     const checkListValues = {}
-    this.priority.forEach((checkList) => checkListValues[checkList] = funcCheckList(element))
-    if (this.priority.tag) checkListValues.tag = checkListValues.tag.toLowerCase()
+    this.priority.forEach((checkList) => {
+      let value = null
+      if (checkList === 'tag') value = element.prop('tagName').toLowerCase()
+      else {
+        value = element.attr(checkList)
+        value = value ? value.split(" ") : null
+      }
+      if (value) checkListValues[checkList] = Array.isArray(value) && value || [value]
+    })
     return checkListValues
   }
 
   getIgnoredValues(key, values) {
     return this.ignore[key]
-      ? this.ignore[key].filter(value => values.indexOf(value) > -1)
+      ? values.filter(value => !(this.ignore[key].indexOf(value) > -1))
       : values
   }
 
@@ -44,9 +41,10 @@ export default class CssCheckList {
     const newCheckList = {}
     checkListKeys.forEach((key) => {
       newCheckList[key] = checkList[key]
-      if (this.ignoreFunc) newCheckList[key] = getIgnoredValuesFromFunc(key, newCheckList[key])
-      if (this.ignore) newCheckList[key] = getIgnoredValues(key, newCheckList[key])
+      if (this.ignoreFunc) newCheckList[key] = this.getIgnoredValuesFromFunc(key, newCheckList[key])
+      if (this.ignore) newCheckList[key] = this.getIgnoredValues(key, newCheckList[key])
     })
     return newCheckList
   }
+
 }

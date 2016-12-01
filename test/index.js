@@ -1,62 +1,74 @@
-import fs from 'fs';
-import { expect } from 'chai';
-import cheerio from 'cheerio';
-import * as CRS from '../src';
+import fs from 'fs'
+import { expect } from 'chai'
+import cheerio from 'cheerio'
+import CRS from '../src'
+import defaultOption from './default'
 
 const html = fs.readFileSync('./test/stub/index.html', 'utf8')
 
-describe('Css selector test', () => {
-  it('should find common parent', (done) => {
-    const $ = cheerio.load(html);
-    const ele1 = $('div#extraDetails > div:nth-child(5) > div.form-field');
-    const ele2 = $('div#extraDetails > div:nth-child(3) > div.form-field');
-    const par = CRS.checkCommonParent(ele1, ele2);
-    expect(par.attr('id')).to.be.equal('extraDetails');
-    done();
-  });
+describe('CSS-Optimum-Selector', () => {
+  xit('should return elements tag, id, class etc...', (done) => {
+    const crs = new CRS()
+    const $ = cheerio.load(html)
+    const ele1 = $('div#extraDetails > div:nth-child(5) > div.form-field')
+    const checkList = crs.getCheckList(ele1)
+    expect(checkList.tag[0]).to.equal('div')
+    expect(checkList.class[0]).to.equal('form-field')
+    done()
+  })
 
-  it('should return correct child relation', (done) => {
-    const $ = cheerio.load(html);
-    const ele1 = $('div#extraDetails > div:nth-child(5) > div.form-field');
-    const relation = CRS.nthChildStr(ele1);
-    expect(relation).to.be.equal('div:nth-child(2)')
+  xit('should return filtered data for values in ignore field', (done) => {
+    const crs = new CRS(defaultOption)
+    const $ = cheerio.load(html)
+    const ele1 = $('div#extraDetails > div:nth-child(5) > div.form-field')
+    const checkList = crs.getCheckList(ele1)
+    expect(checkList.class[0]).to.equal('form-field')
+    const filteredCheckList = crs.getFilteredCheckList(checkList)
     done();
-  });
+  })
 
-  it('should give path from child to parent', (done) => {
-    const $ = cheerio.load(html);
-    const child = $('div#extraDetails > div:nth-child(5) > div.form-field');
-    const parent = $('div#extraDetails');
-    const path = CRS.childToParentTraversal(child, parent);
-    expect(path.length).to.be.equal(2);
+  xit('should return filtered data for values in ignore field', (done) => {
+    const crs = new CRS(defaultOption)
+    const $ = cheerio.load(html)
+    const ele1 = $('div#extraDetails > div:nth-child(5) > div.form-field')
+    const checkList = crs.getCheckList(ele1)
+    expect(checkList.class.length).to.equal(1)
+    const filteredCheckList = crs.getFilteredCheckList(checkList)
+    expect(checkList.class.length).to.equal(2)
+    expect(filteredCheckList.class[1]).to.equal('test-class')
     done();
-  });
+  })
 
-  it('should return relative path ', (done) => {
-    const $ = cheerio.load(html);
-    const ele1 = $('div#extraDetails > div:nth-child(5) > div.form-field');
-    const ele2 = $('div#extraDetails > div:nth-child(3) > div.form-field');
-    const relativePath = CRS.getCommonSelector(ele1, ele2, $);
-    expect(relativePath).to.be.equal('div#extraDetails * div:nth-child(2)');
+  xit('should return array of attr in priority basis', (done) => {
+    const crs = new CRS()
+    const $ = cheerio.load(html)
+    const ele1 = $('div#extraDetails > div:nth-child(5) > div.form-field')
+    const checkList = crs.getCheckList($(ele1))
+    const filteredCheckList = crs.getFilteredCheckList(checkList)
+    const priorityArray = crs.formPriorityArray(filteredCheckList)
+    expect(priorityArray.length).to.equal(2)
     done();
-  });
+  })
 
-  it('should return have required nodes on using relative path', (done) => {
-    const $ = cheerio.load(html);
-    const ele1 = $('div#productsRelated > div:nth-child(2) > div.content-odd > div.details > div.sprice > span.myerror');
-    const ele2 = $('div#productsRelated > div:nth-child(3) > div.content-odd > div.details > div.sprice > span.myerror');
-    const relativePath = CRS.getCommonSelector(ele1, ele2, $);
-    expect($(relativePath).length).to.be.equal(5);
+  xit('should check whether the node is unique to parent', (done) => {
+    const crs = new CRS()
+    const $ = cheerio.load(html)
+    const ele1 = $('div#extraDetails > div:nth-child(5) > div.form-field')
+    const checkList = crs.getCheckList($(ele1), $)
+    const filteredCheckList = crs.getFilteredCheckList(checkList)
+    const priorityArray = crs.formPriorityArray(filteredCheckList)
+    const result = crs.checkUniqueInParent(priorityArray, '', $)
+    expect(priorityArray.length).to.equal(2)
     done();
-  });
+  })
 
-  it('should return false for uncommon elements', (done) => {
-    const $ = cheerio.load(html);
-    const ele1 = $('div#productsRelated > div:nth-child(2) > div.content-odd > div.details > div.sprice > span.myerror');
-    const ele2 = $('div#extraDetails > div:nth-child(3) > div.form-field');
-    const relativePath = CRS.getCommonSelector(ele1, ele2, $);
-    expect(relativePath).to.be.equal(false);
-    done();
-  });
-
-});
+  it('should check whether the node is unique to parent', (done) => {
+    const crs = new CRS()
+    const $ = cheerio.load(html)
+    //#productsRelated > div:nth-child(2) > div.content-odd > div.details > div.sprice
+    const ele1 = $('#productsRelated')
+    const path = crs.cssPath(ele1, $)
+    console.log(path);
+    done()
+  })
+})
