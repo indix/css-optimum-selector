@@ -14,15 +14,19 @@ or
 
 ### What CSS Optimum Selector does ?
 
-It does two main things ! It can extract unique css selector and multi css selector. Oh thats okay. But what is multi css selector ? 
+It does two main things ! It can extract unique css selector and multi css selector.
 
-Cool. Just imagine an ordered list with n number of elements. If you wanted to select all the list elements, what will you do ? Click all element and then find its css selector ? No, not needed. Just pass two element to CSS Optimum Selector and it will analyse the pattern and will give you single selector that can select all list elements. That seems interesting !!! :-D
+Oh thats okay. But what is multi css selector ? 
 
-What if there is different pattern, for instance odd, even type. Can I get still all elements or can I get only certain pattern elements ? Can CSS Optimum Selector help me in this case ?
+Cool. Just imagine an ordered list with n number of elements. If you wanted to select all the list elements, what will you do ? Click all element and then find its css selector ? No, not needed. Just pass two element to CSS Optimum Selector and it will analyse the pattern and will give you single selector that can select all list elements.
 
-Yeah dude, it will help you for sure ! It gives you relative-depth option with which you can select different pattern. That seems great !!! :-O
+That seems interesting !!! :-D What if there is different pattern, for instance odd, even type. Can I get still all elements or can I get only certain pattern elements ? Can CSS Optimum Selector help me in this case ?
 
-What if there is no pattern in selection. Cool down, CSS Optimum Selector will return you css selector for both the element ;-)
+Yeah dude, it will help you for sure ! It gives you relative-depth option with which you can select different pattern.
+
+That seems great !!! :-O What if there is no pattern in selection ?
+
+Cool down, CSS Optimum Selector will return you css selector for both the element B-)
 
 ### How to use ?
 
@@ -30,7 +34,7 @@ Acquire the class by importing or requiring after installing the package. Then p
 
 * Why Option ?
 
-  You can pass various options to the class so that your manipulation is reduced !! Is this mandatory ? No. You can skip this and use the class directly if you dont have any interest. But wait, this will really save ur time if you want any filter operations to carry out on DOM element's tag, id, class or any attributes.
+  You can pass various options to the class so that your manipulation is reduced !! Is this mandatory ? No. You can skip this and use the class directly if you dont have any interest. But wait, this will really save your time if you want any filter operations to be carried out on DOM element's tag, id, class or any attributes.
 
   You can also assign priority for attributes and tag. So is that all option does ? Haha no ! You can set root element and also set the relative-depth for multi-selector. 
 
@@ -58,7 +62,9 @@ Acquire the class by importing or requiring after installing the package. Then p
 
 ### Usage
 
-There are four member-functions availabe to use. Two for unique-css-selector and two for multi-selector. Why two ? Because you may want to pass javascript node element or jQuery node element. So you can choose any methods that suit you best :)
+There are four member-functions availabe to use. Two for unique-css-selector and two for multi-selector. Why two ? Because you may want to pass javascript node element or jQuery node element. So you can choose any method that suits you best :)
+
+It can be used in ES6 or ES5. Below I am giving an example in ES6 format.
 
 * Unique Css Selector Functions
 
@@ -76,7 +82,7 @@ There are four member-functions availabe to use. Two for unique-css-selector and
   => multiSelector                  ---> argument is jQuery node element
 ```  
 
-CSS selector needs one argument which is a target element. Multi selector needs three argument and third argument is optional. First two arguments are the target element and third optional argument is number which is relative depth for searching.
+CSS selector needs one argument which is a target element. Multi selector need three arguments in which third argument is optional. First two arguments are the target elements and third optional argument is number which is relative depth for searching.
 
 * Snipet
 
@@ -105,3 +111,11 @@ class SomeRandomClass {
 
 }
 ```
+
+### Future Enhancement
+
+Will you be amazed to set relative depth at run time so that you can query different pattern for any number of times without doing the operation again and again ? Sit and relax. COMING SOON !!!
+
+### Contact
+
+For any issues and doubts feel friendly to contact me [Manishwaran](https://www.linkedin.com/in/manish-waran-9a54a1ba?trk=hp-identity-name)
