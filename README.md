@@ -41,11 +41,11 @@ Acquire the class by importing or requiring after installing the package. Then p
       }
     }
   }
-   ```
-ni
+```
+
 ### Usage
 
-    There are four member-functions availabe to use. Two for unique-css-selector and two for multi-selector. Why two ? Because you may want to pass javascript node element or jQuery node element. So you can choose any methods that suit you best :)
+There are four member-functions availabe to use. Two for unique-css-selector and two for multi-selector. Why two ? Because you may want to pass javascript node element or jQuery node element. So you can choose any methods that suit you best :)
 
 * Unique Css Selector Functions
 
@@ -63,7 +63,7 @@ ni
   => multiSelector                  ---> argument is jQuery node element
 ```  
 
-    CSS selector needs one argument which is a target element. Multi selector needs three argument and third argument is optional. First two arguments are the target element and third optional argument is number which is relative depth for searching.
+CSS selector needs one argument which is a target element. Multi selector needs three argument and third argument is optional. First two arguments are the target element and third optional argument is number which is relative depth for searching.
 
 * Snipet
 
