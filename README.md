@@ -69,9 +69,9 @@ It can be used in ES6 or ES5. Below I am giving an example in ES6 format.
 * Unique Css Selector Functions
 
 ```
-  => getUniqueCssSelector           ---> argument is javascript node element
+  => getUniqueCssSelector     ---> argument is javascript node element; return type string
   
-  => uniqueCssSelector              ---> argument is jQuery node element
+  => uniqueCssSelector        ---> argument is jQuery node element; return type array of string
 ``` 
 
 * Multi Selector
@@ -118,4 +118,4 @@ Will you be amazed to set relative depth at run time so that you can query diffe
 
 ### Contact
 
-For any issues and doubts feel friendly to contact me [Manishwaran](https://www.linkedin.com/in/manish-waran-9a54a1ba?trk=hp-identity-name)
+For any issues and doubts feel friendly to contact me [Manishwaran](https://www.linkedin.com/in/manish-waran-9a54a1ba?trk=hp-identity-name).
