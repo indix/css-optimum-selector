@@ -1,4 +1,5 @@
 import CssCheckListHelper from './css-checklist-helper'
+import $ from 'jquery'
 
 export default class CssTraversalHelper extends CssCheckListHelper {
 
@@ -27,7 +28,7 @@ export default class CssTraversalHelper extends CssCheckListHelper {
     return str;
   }
 
-  checkUniqueInParent(parent, priorityArray, path, $) {
+  checkUniqueInParent(parent, priorityArray, path) {
     let temPath = ''
     for(let i=0; i<priorityArray.length; i++) {
       for(let j=i; j<priorityArray.length; j++) {

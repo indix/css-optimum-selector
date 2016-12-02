@@ -66,7 +66,7 @@ describe('CSS-Optimum-Selector', () => {
     const crs = new CRS()
     const $ = cheerio.load(html)
     const ele1 = $('#productsRelated > div:nth-child(3) > div.content-even > div.details > div.sprice > span')
-    const path = crs.cssPath(ele1, $)
+    const path = crs.cssPath(ele1)
     expect(path).to.equal('div:nth-child(3) > .content-even > div > div > span')
     done()
   })

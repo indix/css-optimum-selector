@@ -1,5 +1,5 @@
 import CssOptimumSelectorHelper from './css-traversal-helper'
-
+import $ from 'jquery'
 export default class CssOptimumSelector extends CssOptimumSelectorHelper {
 
   constructor(props) {
@@ -9,12 +9,12 @@ export default class CssOptimumSelector extends CssOptimumSelectorHelper {
     this.getCommonSelector = this.getCommonSelector.bind(this)
   }
 
-  cssPath(element, $, path = '') {
+  cssPath(element, path = '') {
     if (path && this.isUniqueInDocument(element, path)) return path
     const checkList = this.getCheckList(element)
     const filteredCheckList = this.getFilteredCheckList(checkList)
     const priorityArray = this.formPriorityArray(filteredCheckList)
-    const result = this.checkUniqueInParent(element.parent(), priorityArray, path, $)
+    const result = this.checkUniqueInParent(element.parent(), priorityArray, path)
     let parentPath = null
     if(result) {
       parentPath = result
@@ -22,11 +22,11 @@ export default class CssOptimumSelector extends CssOptimumSelectorHelper {
       parentPath = `${this.nthChildStr(element)}`
       if (path) parentPath = `${parentPath} > ${path}`
     }
-    return this.cssPath(element.parent(), $, parentPath)
+    return this.cssPath(element.parent(), parentPath)
   }
 
-  uniqueCssSelector(element, $) {
-    return this.cssPath($(element), $)
+  uniqueCssSelector(element) {
+    return this.cssPath($(element))
   }
 
   getCommonSelector(firstElement, secondElement) {

@@ -37,5 +37,8 @@
     "mocha": "^3.2.0",
     "webpack": "^2.1.0-beta.25",
     "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1"
   }
 }
