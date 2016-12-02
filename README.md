@@ -45,18 +45,50 @@ Acquire the class by importing or requiring after installing the package. Then p
 ni
 ### Usage
 
-There are four member-functions availabe to use. Two for unique-css-selector and two for multi-selector. Why two ? Because you may want to pass javascript node element or jQuery node element. So you can choose any methods that suit you best :)
+    There are four member-functions availabe to use. Two for unique-css-selector and two for multi-selector. Why two ? Because you may want to pass javascript node element or jQuery node element. So you can choose any methods that suit you best :)
 
 * Unique Css Selector Functions
+
+```
+  => getUniqueCssSelector           ---> argument is javascript node element
   
-  1 getCssPath           ---> argument is javascript node element
-  2 uniqueCssSelector    ---> argument is jQuery node element
-  
+  => uniqueCssSelector              ---> argument is jQuery node element
+``` 
+
 * Multi Selector
+
+```
+  => getCommonSelector              ---> argument is javascript node element
   
-  1 getCommonSelector    ---> argument is javascript node element
-  2 multiSelector        ---> argument is jQuery node element
+  => multiSelector                  ---> argument is jQuery node element
+```  
+
+    CSS selector needs one argument which is a target element. Multi selector needs three argument and third argument is optional. First two arguments are the target element and third optional argument is number which is relative depth for searching.
+
+* Snipet
+
+```
+import CSSOptimumSelector from 'css-optimum-selector'
+
+const option = {
+  root: 'body',
+  relativeDepth: 3,
+}
+
+class SomeRandomClass {
+  constructor() {
+    this.cssOptimumSelector = new cssOptimumSelector(option)
+  }
   
+  someEventHandler(event) {
+    const selector = this.cssOptimumSelector.getUniqueCssSelector(event.target)
+    //for js element above way. If using any jQuery then go for cssOptimumSelector.uniqueCssSelector(targetElm)
+  }
+  
+  multiSelector(target1, target2) {
+    const multiSelector = this.cssOptimumSelector.getMultiSelector(target1, target2, 2)
+    //for js element above way. If using any jQuery then go for cssOptimumSelector.multiSelector(targetElm)
+  }
 
-
-
+}
+```
