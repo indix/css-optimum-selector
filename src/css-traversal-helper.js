@@ -11,6 +11,10 @@ export default class CssTraversalHelper extends CssCheckListHelper {
     }
   }
 
+  formPriorityArray(checkList) {
+    return Object.keys(checkList).reduce((pre, cur) => pre.concat(this.composePathStringHelper(cur, checkList[cur])), [])
+  }
+
   isUniqueToParent(element, path) {
     return (element.find(path).length === 1)
   }
@@ -43,6 +47,10 @@ export default class CssTraversalHelper extends CssCheckListHelper {
     return false
   }
 
+  checkCommonPath(path1, path2) {
+    return path1 !== null && path1 === path2
+  }
+
   checkCommonParent(elm1, elm2) {
     if (!elm1.length || !elm2.length) return null
     return elm1.is(elm2) ? elm1 : this.checkCommonParent(elm1.parent(), elm2.parent())
@@ -55,12 +63,23 @@ export default class CssTraversalHelper extends CssCheckListHelper {
     return path
   }
 
-  checkCommonPath(path1, path2) {
-    path1 !== null && path1 === path2
+  checkRelativeDegree(path1, path2) {
+    let relative = 0
+    const path1Array = path1.split(" > ").reverse()
+    const path2Array = path2.split(" > ").reverse()
+    while (path1Array[relative] && path1Array[relative] === path2Array[relative]) relative++
+    this.maxRelativeDegree = relative
+    return relative
   }
 
-  formPriorityArray(checkList) {
-    return Object.keys(checkList).reduce((pre, cur) => pre.concat(this.composePathStringHelper(cur, checkList[cur])), [])
+  getRelativeChildPath(path1, relativeDepth) {
+    let depth = this.maxRelativeDegree
+    if (relativeDepth <= depth) depth = relativeDepth
+    let path = [];
+    let iterator = 0;
+    const path1Array = path1.split(" > ").reverse()
+    while(--depth > -1) path.push(path1Array[iterator++])
+    return path.reverse().join(" > ")
   }
 
 }

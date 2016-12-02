@@ -29,17 +29,20 @@ export default class CssOptimumSelector extends CssOptimumSelectorHelper {
     return this.cssPath($(element))
   }
 
-  getCommonSelector(firstElement, secondElement) {
-    const commonParent = this.checkCommonParent(firstElement, secondElement);
-    if (!commonParent) return false;
-    const ele1Path = this.childToParentTraversal(ele1, commonParent).slice(1).join(' > ');
-    const ele2Path = this.childToParentTraversal(ele2, commonParent).slice(1).join(' > ');
+  getCommonSelector(firstElement, secondElement, relativeDepth = this.relativeDepth) {
+    const commonParent = this.checkCommonParent(firstElement, secondElement)
+    const noCommonSelector = () => [this.cssPath(firstElement), this.cssPath(secondElement)]
+    if (!commonParent) return noCommonSelector()
+    const ele1Path = this.childToParentTraversal(firstElement, commonParent).slice(1).join(' > ')
+    const ele2Path = this.childToParentTraversal(secondElement, commonParent).slice(1).join(' > ')
     if (this.checkCommonPath(ele1Path, ele2Path)) {
-      const path = this.cssPath(commonParent, '');
-      const commonSelector = `${path} ${ele1Path}`;
-      return commonSelector;
+      const path = this.cssPath(commonParent)
+      const relativeDegree = this.checkRelativeDegree(ele1Path, ele2Path)
+      const relativeChildPath = this.getRelativeChildPath(ele1Path,relativeDepth)
+      const commonSelector = `${path} ${relativeChildPath}`
+      return [commonSelector]
     }
-    return false;
+    return noCommonSelector()
   }
 
   commonSelector(firstElement, secondElement) {

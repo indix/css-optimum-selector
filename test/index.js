@@ -62,12 +62,33 @@ describe('CSS-Optimum-Selector', () => {
     done();
   })
 
-  it('should check whether the node is unique to parent', (done) => {
+  it('should return two selector for uncommon selectors', (done) => {
     const crs = new CRS()
     const $ = cheerio.load(html)
     const ele1 = $('#productsRelated > div:nth-child(3) > div.content-even > div.details > div.sprice > span')
-    const path = crs.cssPath(ele1)
-    expect(path).to.equal('div:nth-child(3) > .content-even > div > div > span')
+    const ele2 = $('#extraDetails > div:nth-child(3) > div.form-field')
+    const path = crs.getCommonSelector(ele1, ele2)
+    expect(path.length).to.equal(2)
+    done()
+  })
+
+  it('should return relative path for relative selectors', (done) => {
+    const crs = new CRS()
+    const $ = cheerio.load(html)
+    const ele1 = $('#productsRelated > div:nth-child(3) > div.content-even > div.details > div.sprice > span')
+    const ele2 = $('#productsRelated > div:nth-child(2) > div.content-even > div.details > div.sprice > span')
+    const path = crs.getCommonSelector(ele1, ele2)
+    expect(path.length).to.equal(1)
+    done()
+  })
+
+  it('should return relative path on relative depth basis', (done) => {
+    const crs = new CRS()
+    const $ = cheerio.load(html)
+    const ele1 = $('#productsRelated > div:nth-child(3) > div.content-even > div.details > div.sprice > span')
+    const ele2 = $('#productsRelated > div:nth-child(2) > div.content-even > div.details > div.sprice > span')
+    const path = crs.getCommonSelector(ele1, ele2)
+    expect(path[0]).to.equal('#productsRelated span:nth-child(5)')
     done()
   })
 })
