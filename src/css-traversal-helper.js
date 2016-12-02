@@ -11,11 +11,10 @@ export default class CssTraversalHelper extends CssCheckListHelper {
   }
 
   isUniqueToParent(element, path) {
-    return element.parent().find(path).length === 1
+    return (element.find(path).length === 1)
   }
 
   isUniqueInDocument(element, path) {
-    console.log('\n', path);
     const root = element.closest(this.root)
     return root.find(path).length === 1
   }
@@ -28,12 +27,14 @@ export default class CssTraversalHelper extends CssCheckListHelper {
     return str;
   }
 
-  checkUniqueInParent(priorityArray, path, $) {
+  checkUniqueInParent(parent, priorityArray, path, $) {
     let temPath = ''
     for(let i=0; i<priorityArray.length; i++) {
       for(let j=i; j<priorityArray.length; j++) {
-        const newPath = `${temPath}${priorityArray[j]} ${path}`
-        const result = this.isUniqueToParent($(newPath), newPath) && newPath
+        const newPath = path
+          ? `${temPath}${priorityArray[j]} > ${path}`
+          : `${temPath}${priorityArray[j]}`
+        const result = this.isUniqueToParent(parent, newPath) && newPath
         if (result) return result
       }
       temPath = `${priorityArray[i]}${temPath}`
@@ -53,7 +54,7 @@ export default class CssTraversalHelper extends CssCheckListHelper {
     return path
   }
 
-  checkCommonPath(path1, path2){
+  checkCommonPath(path1, path2) {
     path1 !== null && path1 === path2
   }
 

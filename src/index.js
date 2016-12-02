@@ -14,11 +14,15 @@ export default class CssOptimumSelector extends CssOptimumSelectorHelper {
     const checkList = this.getCheckList(element)
     const filteredCheckList = this.getFilteredCheckList(checkList)
     const priorityArray = this.formPriorityArray(filteredCheckList)
-    const result = this.checkUniqueInParent(priorityArray, path, $)
-    const parentPath = path ? ` > ${path}` : ''
-    // console.log(`${result}${parentPath}`);
-    if (result) return this.cssPath(element.parent(), $, `${result}${parentPath}`,)
-    return this.cssPath(element.parent(), $, `${this.nthChildStr(element)}${parentPath}`)
+    const result = this.checkUniqueInParent(element.parent(), priorityArray, path, $)
+    let parentPath = null
+    if(result) {
+      parentPath = result
+    } else {
+      parentPath = `${this.nthChildStr(element)}`
+      if (path) parentPath = `${parentPath} > ${path}`
+    }
+    return this.cssPath(element.parent(), $, parentPath)
   }
 
   uniqueCssSelector(element, $) {
