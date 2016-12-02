@@ -71,15 +71,15 @@ It can be used in ES6 or ES5. Below I am giving an example in ES6 format.
 ```
   => getUniqueCssSelector     ---> argument is javascript node element; return type string
   
-  => uniqueCssSelector        ---> argument is jQuery node element; return type array of string
+  => uniqueCssSelector        ---> argument is jQuery node element; return type string
 ``` 
 
 * Multi Selector
 
 ```
-  => getCommonSelector              ---> argument is javascript node element
+  => getCommonSelector        ---> argument is javascript node element; return type array of string
   
-  => multiSelector                  ---> argument is jQuery node element
+  => multiSelector            ---> argument is jQuery node element; return type array of string
 ```  
 
 CSS selector needs one argument which is a target element. Multi selector need three arguments in which third argument is optional. First two arguments are the target elements and third optional argument is number which is relative depth for searching.
