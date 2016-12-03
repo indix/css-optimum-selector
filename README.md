@@ -77,7 +77,7 @@ It can be used in ES6 or ES5. Below I am giving an example in ES6 format.
 * Multi Selector
 
 ```
-  => getCommonSelector        ---> argument is javascript node element; return type array of string
+  => getMultiSelector        ---> argument is javascript node element; return type array of string
   
   => multiSelector            ---> argument is jQuery node element; return type array of string
 ```  
