@@ -2,6 +2,14 @@ import CssOptimumSelectorHelper from './css-traversal-helper'
 import $ from 'jquery'
 export default class CssOptimumSelector extends CssOptimumSelectorHelper {
 
+  constructor(props) {
+    super(props);
+    this.multiSelector = this.multiSelector.bind(this)
+    this.getMultiSelector = this.getMultiSelector.bind(this)
+    this.uniqueCssSelector = this.uniqueCssSelector.bind(this)
+    this.getUniqueCssSelector = this.getUniqueCssSelector.bind(this)
+  }
+
   getUniqueCssSelector(element, path = '') {
     if (path && this.isUniqueInDocument(element, path)) return path
     const checkList = this.getCheckList(element)
@@ -42,6 +50,6 @@ export default class CssOptimumSelector extends CssOptimumSelectorHelper {
   }
 
   multiSelector(firstElement, secondElement, relativeDepth = this.relativeDepth) {
-    return getMultiSelector($(firstElement), $(secondElement))
+    return this.getMultiSelector($(firstElement), $(secondElement), relativeDepth)
   }
 }

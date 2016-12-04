@@ -41,7 +41,9 @@ export default class CssCheckList {
     const newCheckList = {}
     checkListKeys.forEach((key) => {
       newCheckList[key] = checkList[key]
-      if (this.ignoreFunc) newCheckList[key] = this.getIgnoredValuesFromFunc(key, newCheckList[key])
+      if (this.ignoreFunc){
+        newCheckList[key] = this.getIgnoredValuesFromFunc(key, newCheckList[key])
+      }
       if (this.ignore) newCheckList[key] = this.getIgnoredValues(key, newCheckList[key])
     })
     return newCheckList

@@ -93,11 +93,15 @@ describe('CSS-Optimum-Selector', () => {
   })
 
   it('should return unique css selector', (done) => {
-    const crs = new CRS()
+    const crs = new CRS({
+      ignoreFunc: {
+        class: data => data.filter(item => item.indexOf('indix') < 0)
+      }
+    })
     const $ = cheerio.load(html)
-    const ele1 = $('#productsRelated > div:nth-child(3) > div.content-even > div.details > div.sprice > span')
+    const ele1 = $('div#extraDetails > div:nth-child(5) > div.form-field')
     const path = crs.getUniqueCssSelector(ele1)
-    expect(path).to.equal('div:nth-child(3) > .content-even > div > div > span')
+    expect(path).to.equal('div:nth-child(5) > .form-field')
     done()
   })
 

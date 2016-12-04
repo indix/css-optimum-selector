@@ -6,13 +6,17 @@ export default class CssTraversalHelper extends CssCheckListHelper {
   composePathStringHelper(key, val) {
     switch (key) {
       case 'tag': return val
-      case 'id': return `#${val}`
-      case 'class': return `.${val}`
+      case 'id': return val.map(item => `#${item}`)
+      case 'class': return val.map(item => `.${item}`)
     }
   }
 
   formPriorityArray(checkList) {
-    return Object.keys(checkList).reduce((pre, cur) => pre.concat(this.composePathStringHelper(cur, checkList[cur])), [])
+    const priorityArray = []
+    Object.keys(checkList).forEach(cur => priorityArray.push(
+      ...this.composePathStringHelper(cur, checkList[cur])
+    ));
+    return priorityArray;
   }
 
   isUniqueToParent(element, path) {
