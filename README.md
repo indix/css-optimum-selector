@@ -62,24 +62,22 @@ Acquire the class by importing or requiring after installing the package. Then p
 
 ### Usage
 
-There are four member-functions availabe to use. Two for unique-css-selector and two for multi-selector. Why two ? Because you may want to pass javascript node element or jQuery node element. So you can choose any method that suits you best :)
+There are two member-functions availabe to use. One for unique-css-selector and one for multi-selector. 
 
 It can be used in ES6 or ES5. Below I am giving an example in ES6 format.
 
 * Unique Css Selector Functions
 
 ```
-  => getUniqueCssSelector     ---> argument is javascript node element; return type string
+  => getUniqueCssSelector     ---> argument is jQuery node element; return type string
   
-  => uniqueCssSelector        ---> argument is jQuery node element; return type string
 ``` 
 
 * Multi Selector
 
 ```
-  => getMultiSelector        ---> argument is javascript node element; return type array of string
-  
-  => multiSelector            ---> argument is jQuery node element; return type array of string
+  => getMultiSelector        ---> argument is jQuery node element; return type array of string
+
 ```  
 
 CSS selector needs one argument which is a target element. Multi selector need three arguments in which third argument is optional. First two arguments are the target elements and third optional argument is number which is relative depth for searching.
@@ -100,13 +98,11 @@ class SomeRandomClass {
   }
   
   someEventHandler(event) {
-    const selector = this.cssOptimumSelector.getUniqueCssSelector(event.target)
-    //for js element above way. If using any jQuery then go for cssOptimumSelector.uniqueCssSelector(targetElm)
+    const selector = this.cssOptimumSelector.getUniqueCssSelector($(event.target))
   }
   
   multiSelector(target1, target2) {
     const multiSelector = this.cssOptimumSelector.getMultiSelector(target1, target2, 2)
-    //for js element above way. If using any jQuery then go for cssOptimumSelector.multiSelector(targetElm)
   }
 
 }
@@ -114,7 +110,7 @@ class SomeRandomClass {
 
 ### Future Enhancement
 
-Will you be amazed to set relative depth at run time so that you can query different pattern for any number of times without doing the operation again and again ? Sit and relax. COMING SOON !!!
+Will you be amazed to query maximum relative depth available and set relative depth at run time so that you can query different pattern for any number of times without doing the operation again and again ? Sit and relax. COMING SOON !!!
 
 ### Contact
 
