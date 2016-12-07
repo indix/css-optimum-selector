@@ -51,11 +51,8 @@ Acquire the class by importing or requiring after installing the package. Then p
       tag: ['tag1', 'tag2', 'tag3'],         //include only the needed one
     },
     ignoreFunc: {
-      class: (args) => {
-        return args.filter((arg) => {        //type - Object of functions
-          arg.index('sample') > -1           //type args - Array of string
-        }
-      }
+      class: args => args.filter(arg =>      //type - Object of functions
+        arg.index('sample') > -1)            //type args - Array of string
     }
   }
 ```
