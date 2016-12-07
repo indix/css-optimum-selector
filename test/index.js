@@ -99,9 +99,9 @@ describe('CSS-Optimum-Selector', () => {
       }
     })
     const $ = cheerio.load(html)
-    const ele1 = $('div#extraDetails > div:nth-child(5) > div.form-field')
+    const ele1 = $('#price > strike')
     const path = crs.getUniqueCssSelector(ele1)
-    expect(path).to.equal('div:nth-child(5) > .form-field')
+    expect(path).to.equal('#price > strike')
     done()
   })
 

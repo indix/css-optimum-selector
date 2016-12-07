@@ -38,17 +38,21 @@ export default class CssTraversalHelper extends CssCheckListHelper {
 
   checkUniqueInParent(parent, priorityArray, path) {
     let temPath = ''
+    let resultPath = false
     for(let i=0; i<priorityArray.length; i++) {
       for(let j=i; j<priorityArray.length; j++) {
         const newPath = path
           ? `${temPath}${priorityArray[j]} > ${path}`
           : `${temPath}${priorityArray[j]}`
         const result = this.isUniqueToParent(parent, newPath) && newPath
-        if (result) return result
+        if (result) {
+          if (!resultPath) resultPath = result
+          if (this.isUniqueInDocument(parent, result)) return result
+        }
       }
       temPath = `${priorityArray[i]}${temPath}`
     }
-    return false
+    return resultPath
   }
 
   checkCommonPath(path1, path2) {
