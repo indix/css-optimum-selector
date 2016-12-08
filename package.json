@@ -1,6 +1,6 @@
 {
   "name": "css-optimum-selector",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Module for finding relative css-selector",
   "main": "lib/index.js",
   "repository": "https://github.com/manishwaran/css-selector.git",
@@ -20,7 +20,7 @@
     "css selection"
   ],
   "author": "Manish",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",

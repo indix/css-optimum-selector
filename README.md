@@ -1,7 +1,7 @@
 # CSS Optimum Selector
 
 
-A class for finding unique css selector and multi-selector(selecting multiple elements based on two relative elements) in a most efficient way. This will give you the shortest selector for any case. It is even shorter than the chrome selector extraction(as per I tested) on console panel ! 
+A class for finding unique css selector and multi-selector in most efficient way. It will give you the shortest selector for any case. It is even shorter than the Google chrome selector.
 
 ### Installation
 ```
@@ -16,7 +16,7 @@ or
 
 It does two main things ! It can extract unique css selector and multi css selector.
 
-Oh thats okay. But what is multi css selector ? 
+Oh thats okay. But what is multi css selector ?
 
 Cool. Just imagine an ordered list with n number of elements. If you wanted to select all the list elements, what will you do ? Click all element and then find its css selector ? No, not needed. Just pass two element to CSS Optimum Selector and it will analyse the pattern and will give you single selector that can select all list elements.
 
@@ -36,7 +36,7 @@ Acquire the class by importing or requiring after installing the package. Then p
 
   You can pass various options to the class so that your manipulation is reduced !! Is this mandatory ? No. You can skip this and use the class directly if you dont have any interest. But wait, this will really save your time if you want any filter operations to be carried out on DOM element's tag, id, class or any attributes.
 
-  You can also assign priority for attributes and tag. So is that all option does ? Haha no ! You can set root element and also set the relative-depth for multi-selector. 
+  You can also assign priority for attributes and tag. So is that all option does ? Haha no ! You can set root element and also set the relative-depth for multi-selector.
 
 * Option Structure
 
@@ -46,7 +46,7 @@ Acquire the class by importing or requiring after installing the package. Then p
     priority: ['tag', 'id', 'class'],        //type - Array of string
     relativeDepth: 2,                        //type - number
     ignore: {                                //type - Object of array of string
-      class: ['class1', 'class2', 'class3'], 
+      class: ['class1', 'class2', 'class3'],
       id: ['id1', 'id2', 'id3'],             //not mandatory to have all keys
       tag: ['tag1', 'tag2', 'tag3'],         //include only the needed one
     },
@@ -59,7 +59,7 @@ Acquire the class by importing or requiring after installing the package. Then p
 
 ### Usage
 
-There are two member-functions availabe to use. One for unique-css-selector and one for multi-selector. 
+There are two member-functions availabe to use. One for unique-css-selector and one for multi-selector.
 
 It can be used in ES6 or ES5. Below I am giving an example in ES6 format.
 
@@ -67,8 +67,8 @@ It can be used in ES6 or ES5. Below I am giving an example in ES6 format.
 
 ```
   => getUniqueCssSelector     ---> argument is jQuery node element; return type string
-  
-``` 
+
+```
 
 * Multi Selector
 
@@ -93,11 +93,11 @@ class SomeRandomClass {
   constructor() {
     this.cssOptimumSelector = new cssOptimumSelector(option)
   }
-  
+
   someEventHandler(event) {
     const selector = this.cssOptimumSelector.getUniqueCssSelector($(event.target))
   }
-  
+
   multiSelector(target1, target2) {
     const multiSelector = this.cssOptimumSelector.getMultiSelector(target1, target2, 2)
   }
