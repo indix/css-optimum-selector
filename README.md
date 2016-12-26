@@ -1,7 +1,7 @@
 # CSS Optimum Selector
 
 
-A class for finding unique css selector and multi-selector in most efficient way. It will give you the shortest selector for any case. It is even shorter than the Google chrome selector.
+A module to identify an unique css selector for a jQuery element in a most efficient way. An input of two jQuery elements return a common CSS selector matching a pattern of both the input elements.
 
 ### Installation
 ```
@@ -12,31 +12,42 @@ or
 <script src="https://unpkg.com/css-optimum-selector/lib/index.min.js"></script>
 ```
 
-### What CSS Optimum Selector does ?
+### What CSS Optimum Selector do?
 
-It does two main things ! It can extract unique css selector and multi css selector.
+The module solves two use-cases: 
+1. Given an element, extract the unique css selector. 
+2. Given a couple of elements, extract a multi-element css selector uniquely identifying the patten in the input element list.
 
-Oh thats okay. But what is multi css selector ?
+What is multi-element css selector?
 
-Cool. Just imagine an ordered list with n number of elements. If you wanted to select all the list elements, what will you do ? Click all element and then find its css selector ? No, not needed. Just pass two element to CSS Optimum Selector and it will analyse the pattern and will give you single selector that can select all list elements.
+Imagine an ordered list with n number of elements. To select all the elements in the list, one would skim through each of the element and find a common pattern of CSS selector among them. 
+"CSS Optimum Selector" do it more intelligently. A input of just 2 elements from the list is enough to pull-out the common pattern and the module extracts a single CSS selector that can select all the list elements.
 
-That seems interesting !!! :-D What if there is different pattern, for instance odd, even type. Can I get still all elements or can I get only certain pattern elements ? Can CSS Optimum Selector help me in this case ?
+What if there is a different pattern, for instance odd, even type? Can the module uniquely identify all the elements or can it get only certain pattern of elements?
 
-Yeah dude, it will help you for sure ! It gives you relative-depth option with which you can select different pattern.
+Yes, it can still identify all the elements. The relative-depth option allows to select a either only a single matching pattern or all the patterns.
 
-That seems great !!! :-O What if there is no pattern in selection ?
+What if there is no pattern in selection ?
 
-Cool down, CSS Optimum Selector will return you css selector for both the element B-)
+In no patterns case, CSS Optimum Selector will return css selector for each of the element passed as input.
 
 ### How to use ?
 
-Acquire the class by importing or requiring after installing the package. Then pass down the option object(if needed) during the initialization. You should know following things to use this package efficiently !
+```
+import CSSOptimumSelector from 'css-optimum-selector'
+```
 
-* Why Option ?
+Optionally, The module accepts a list of options. The options help to identify the selector in more optimum way by applying filter operations the on input element's tag, id, class or any other attributes.
 
-  You can pass various options to the class so that your manipulation is reduced !! Is this mandatory ? No. You can skip this and use the class directly if you dont have any interest. But wait, this will really save your time if you want any filter operations to be carried out on DOM element's tag, id, class or any attributes.
+Below are definition of options:
+* root : The root element to beign unique CSS selector extraction. _Default - html_
+* priority : The ordered list of identifiers to be used as priority in extractiong selector. _Default - priority: ['tag', 'id', 'class']_
+* relativeDepth - Used only for multi-element selector. A value of __1__ is to select all matching list of elements. A value of __2 or above__ is to select only the patterns which match its occurance. For example: Consider a (odd, even, odd, even..) pattern of elements. An input of two odd elements with relativeDepth=2 will return CSS selector to identify all the odd elements. An input of two odd elements with relativeDepth=1 will return CSS selector to identify all listed elements. _Default - 1_
 
-  You can also assign priority for attributes and tag. So is that all option does ? Haha no ! You can set root element and also set the relative-depth for multi-selector.
+* ignore : For each of class, id and tag, the option accepts an array of classes, ids or tags to 
+ignored in extracting a CSS selector.
+* ignoreFunc : Same logic as ignore parameter, but ignoreFunc accepts a function returning a boolean indicating whether the class, id or tag can be ignored or not.
+
 
 * Option Structure
 
@@ -61,25 +72,27 @@ Acquire the class by importing or requiring after installing the package. Then p
 
 There are two member-functions availabe to use. One for unique-css-selector and one for multi-selector.
 
-It can be used in ES6 or ES5. Below I am giving an example in ES6 format.
+The module can be used in ES6 or ES5. Below is an example in ES6 format.
 
-* Unique Css Selector Functions
+* Unique CSS Selector
 
 ```
   => getUniqueCssSelector     ---> argument is jQuery node element; return type string
 
 ```
 
-* Multi Selector
+* Multi-element CSS Selector
 
 ```
-  => getMultiSelector        ---> argument is jQuery node element; return type array of string
+  => getMultiSelector         ---> argument is jQuery node element; return type array of string
 
 ```  
 
-CSS selector needs one argument which is a target element. Multi selector need three arguments in which third argument is optional. First two arguments are the target elements and third optional argument is number which is relative depth for searching.
+**getUniqueCssSelector** accepts one argument the target element. 
 
-* Snipet
+**getMultiSelector** accepts three arguments, the third being optional. The first two arguments are the target elements and the third optional argument is a number indicating the relative depth.
+
+* Snippet
 
 ```
 import CSSOptimumSelector from 'css-optimum-selector'
@@ -105,10 +118,14 @@ class SomeRandomClass {
 }
 ```
 
-### Future Enhancement
+### Status
+This project is being actively developed and should be considered alpha quality.
 
-Will you be amazed to query maximum relative depth available and set relative depth at run time so that you can query different pattern for any number of times without doing the operation again and again ? Sit and relax. COMING SOON !!!
 
-### Contact
+### Further Enhancement
 
-For any issues and doubts feel friendly to contact me [Manishwaran](https://www.linkedin.com/in/manish-waran-9a54a1ba?trk=hp-identity-name).
+What if the module suggests the maximum relative depth available and the same can be set at runtime, instead of hard-coding relativeDepth within options? Star or watch the project for updates on features.
+
+### Contribute
+
+For any issues or queries, do raise a Github Issue. If you're interested to contribute, please feel free to fork and send in a Pull Request.
