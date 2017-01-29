@@ -1,14 +1,6 @@
-import defaultProps from './defaults'
+import OptionHandler from './option-handler'
 
-export default class CssCheckList {
-
-  constructor(props) {
-    this.ignore = (props && props.ignore) || null
-    this.ignoreFunc = (props && props.ignoreFunc) || null
-    this.root = (props && props.root) || 'html'
-    this.priority = (props && props.priority) || defaultProps.priority
-    this.relativeDepth = (props && props.relativeDepth) || defaultProps.relativeDepth
-  }
+export default class CssCheckList extends OptionHandler {
 
   getCheckList(element) {
     const checkListValues = {}

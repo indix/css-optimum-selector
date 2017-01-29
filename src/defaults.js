@@ -5,4 +5,5 @@ export default {
     'class',
   ],
   relativeDepth: 1,
+  startWith: [],
 }
