@@ -41,7 +41,7 @@ Optionally, The module accepts a list of options. The options help to identify t
 
 Below are definition of options:
 * root : The root element to begin unique CSS selector extraction. _Default - html_
-* startWith: The selector can start with the specified rule. This is optional, if not specified the selector of shortest will be returned.  
+* startWith: The selector can start with the specified rule. This is optional, if not specified the selector of shortest will be returned. The value is an array which means that the startwith value can be more than one (i.e) specifying ['id', 'class', 'tag'] means the selector can start with any one of the above value. 
 * priority : The ordered list of identifiers to be used as priority in extractiong selector. _Default - priority: ['tag', 'id', 'class']_
 * relativeDepth - Used only for multi-element selector. A value of __1__ is to select all matching list of elements. A value of __2 or above__ is to select only the patterns which match its occurance. For example: Consider a (odd, even, odd, even..) pattern of elements. An input of two odd elements with relativeDepth=2 will return CSS selector to identify all the odd elements. An input of two odd elements with relativeDepth=1 will return CSS selector to identify all listed elements. _Default - 1_
 
