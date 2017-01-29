@@ -25,7 +25,8 @@ export default class CssTraversalHelper extends CssCheckListHelper {
 
   isUniqueInDocument(element, path) {
     const root = element.closest(this.root)
-    return root.find(path).length === 1
+    if (root.prop('tagName') === element.prop('tagName')) return root.find(path).length === 1
+    if (this.checkStartWith(element, path)) return root.find(path).length === 1
   }
 
   nthChildStr(element)  {
