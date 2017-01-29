@@ -40,7 +40,8 @@ import CSSOptimumSelector from 'css-optimum-selector'
 Optionally, The module accepts a list of options. The options help to identify the selector in more optimum way by applying filter operations the on input element's tag, id, class or any other attributes.
 
 Below are definition of options:
-* root : The root element to beign unique CSS selector extraction. _Default - html_
+* root : The root element to begin unique CSS selector extraction. _Default - html_
+* startWith: The selector can start with the specified rule. This is optional, if not specified the selector of shortest will be returned.  
 * priority : The ordered list of identifiers to be used as priority in extractiong selector. _Default - priority: ['tag', 'id', 'class']_
 * relativeDepth - Used only for multi-element selector. A value of __1__ is to select all matching list of elements. A value of __2 or above__ is to select only the patterns which match its occurance. For example: Consider a (odd, even, odd, even..) pattern of elements. An input of two odd elements with relativeDepth=2 will return CSS selector to identify all the odd elements. An input of two odd elements with relativeDepth=1 will return CSS selector to identify all listed elements. _Default - 1_
 
@@ -54,6 +55,7 @@ ignored in extracting a CSS selector.
   ```
   const option = {
     root: 'html',                            //type - string
+    startWith: ['id', 'class']               //type - Array of string
     priority: ['tag', 'id', 'class'],        //type - Array of string
     relativeDepth: 2,                        //type - number
     ignore: {                                //type - Object of array of string
