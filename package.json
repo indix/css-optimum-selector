@@ -9,7 +9,7 @@
     "build:watch": "babel src --out-dir lib --watch",
     "build": "webpack --config=webpack.config.babel.js",
     "build:minify": "babel src/index.js --out-file lib/index.min.js --minified",
-    "prepublish": "npm run build && npm run build:minify",
+    "prepublish": "npm run build && npm run build",
     "preversion": "npm build && npm test"
   },
   "keywords": [
