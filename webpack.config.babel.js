@@ -1,9 +1,13 @@
+import webpack from 'webpack'
+
 const config = {
-  entry: './example/src/index.js',
+  entry: './src/index.js',
   output: {
     filename: 'index.js',
-    path: './example/build'
+    path: 'lib',
+    libraryTarget: 'commonjs2'
   },
+  target: 'node',
   module: {
     loaders: [
       {
@@ -18,7 +22,17 @@ const config = {
         loader: 'html',
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+    compress: {
+      warnings: false,
+    },
+    output: {
+      comments: false,
+    }
+  })
+  ]
 }
 
 module.exports = config
