@@ -32,7 +32,7 @@ const browser = Object.assign({}, commonConfig, {
     filename: 'dist.js',
     path: 'lib',
     libraryTarget: 'var',
-    library: 'test'
+    library: 'CSSOptimumSelector'
   },
   target: 'web',
 })
@@ -40,8 +40,7 @@ const nodeModule = Object.assign({}, commonConfig, {
   output: {
     filename: 'index.js',
     path: 'lib',
-    libraryTarget: 'commonjs2',
-    library: 'test'
+    libraryTarget: 'commonjs2'
   },
   target: 'node',
 })
