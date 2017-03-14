@@ -1,13 +1,6 @@
 import webpack from 'webpack'
-
-const config = {
+const commonConfig = {
   entry: './src/index.js',
-  output: {
-    filename: 'index.js',
-    path: 'lib',
-    libraryTarget: 'commonjs2'
-  },
-  target: 'node',
   module: {
     loaders: [
       {
@@ -34,5 +27,24 @@ const config = {
   })
   ]
 }
+const browser = Object.assign({}, commonConfig, {
+  output: {
+    filename: 'dist.js',
+    path: 'lib',
+    libraryTarget: 'var',
+    library: 'test'
+  },
+  target: 'web',
+})
+const nodeModule = Object.assign({}, commonConfig, {
+  output: {
+    filename: 'index.js',
+    path: 'lib',
+    libraryTarget: 'commonjs2',
+    library: 'test'
+  },
+  target: 'node',
+})
+const config = [browser, nodeModule]
 
-module.exports = config
+module.exports = config;

@@ -88,7 +88,7 @@ describe('CSS-Optimum-Selector', () => {
     const ele1 = $('#productsRelated > div:nth-child(3) > div.content-even > div.details > div.sprice > span')
     const ele2 = $('#productsRelated > div:nth-child(2) > div.content-even > div.details > div.sprice > span')
     const path = crs.getMultiSelector(ele1, ele2)
-    expect(path[0]).to.equal('#productsRelated span:nth-child(5)')
+    expect(path[0]).to.equal('body > table > tbody > tr > td > div > div > #productsRelated span:nth-child(5)')
     done()
   })
 
@@ -101,7 +101,7 @@ describe('CSS-Optimum-Selector', () => {
     const $ = cheerio.load(html)
     const ele1 = $('#price > strike')
     const path = crs.getUniqueCssSelector(ele1)
-    expect(path).to.equal('#price > strike')
+    expect(path).to.equal('body > table > tbody > tr > td > div > form > div > div > div > strike')
     done()
   })
 

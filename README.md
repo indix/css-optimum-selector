@@ -9,18 +9,18 @@ npm i css-optimum-selector --save
 ```
 or
 ``` html
-<script src="https://unpkg.com/css-optimum-selector/lib/index.min.js"></script>
+<script src="https://unpkg.com/css-optimum-selector/lib/dist.js"></script>
 ```
 
 ### What CSS Optimum Selector do?
 
-The module solves two use-cases: 
-1. Given an element, extract the unique css selector. 
+The module solves two use-cases:
+1. Given an element, extract the unique css selector.
 2. Given a couple of elements, extract a multi-element css selector uniquely identifying the patten in the input element list.
 
 What is multi-element css selector?
 
-Imagine an ordered list with n number of elements. To select all the elements in the list, one would skim through each of the element and find a common pattern of CSS selector among them. 
+Imagine an ordered list with n number of elements. To select all the elements in the list, one would skim through each of the element and find a common pattern of CSS selector among them.
 "CSS Optimum Selector" do it more intelligently. A input of just 2 elements from the list is enough to pull-out the common pattern and the module extracts a single CSS selector that can select all the list elements.
 
 What if there is a different pattern, for instance odd, even type? Can the module uniquely identify all the elements or can it get only certain pattern of elements?
@@ -41,11 +41,11 @@ Optionally, The module accepts a list of options. The options help to identify t
 
 Below are definition of options:
 * root : The root element to begin unique CSS selector extraction. _Default - html_
-* startWith: The selector can start with the specified rule. This is optional, if not specified the selector of shortest will be returned. The value is an array which means that the startwith value can be more than one (i.e) specifying ['id', 'class', 'tag'] means the selector can start with any one of the above value. 
+* startWith: The selector can start with the specified rule. This is optional, if not specified the selector of shortest will be returned. The value is an array which means that the startwith value can be more than one (i.e) specifying ['id', 'class', 'tag'] means the selector can start with any one of the above value.
 * priority : The ordered list of identifiers to be used as priority in extractiong selector. _Default - priority: ['tag', 'id', 'class']_
 * relativeDepth - Used only for multi-element selector. A value of __1__ is to select all matching list of elements. A value of __2 or above__ is to select only the patterns which match its occurance. For example: Consider a (odd, even, odd, even..) pattern of elements. An input of two odd elements with relativeDepth=2 will return CSS selector to identify all the odd elements. An input of two odd elements with relativeDepth=1 will return CSS selector to identify all listed elements. _Default - 1_
 
-* ignore : For each of class, id and tag, the option accepts an array of classes, ids or tags to 
+* ignore : For each of class, id and tag, the option accepts an array of classes, ids or tags to
 ignored in extracting a CSS selector.
 * ignoreFunc : Same logic as ignore parameter, but ignoreFunc accepts a function returning a boolean indicating whether the class, id or tag can be ignored or not.
 
@@ -90,7 +90,7 @@ The module can be used in ES6 or ES5. Below is an example in ES6 format.
 
 ```  
 
-**getUniqueCssSelector** accepts one argument the target element. 
+**getUniqueCssSelector** accepts one argument the target element.
 
 **getMultiSelector** accepts three arguments, the third being optional. The first two arguments are the target elements and the third optional argument is a number indicating the relative depth.
 
