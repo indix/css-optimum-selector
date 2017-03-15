@@ -31,7 +31,7 @@ const browser = Object.assign({}, commonConfig, {
   output: {
     filename: 'dist.js',
     path: 'lib',
-    libraryTarget: 'var',
+    libraryTarget: 'window',
     library: 'CSSOptimumSelector'
   },
   target: 'web',
