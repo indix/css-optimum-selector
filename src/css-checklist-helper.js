@@ -9,7 +9,7 @@ export default class CssCheckList extends OptionHandler {
       if (checkList === 'tag') value = element.prop('tagName').toLowerCase()
       else {
         value = element.attr(checkList)
-        value = value ? value.split(" ") : null
+        value = value ? value.split(" ").filter(i => i) : null
       }
       if (value) checkListValues[checkList] = Array.isArray(value) && value || [value]
     })
