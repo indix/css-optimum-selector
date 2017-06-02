@@ -6,7 +6,9 @@ export default class CssCheckList extends OptionHandler {
     const checkListValues = {}
     this.priority.forEach((checkList) => {
       let value = null
-      if (checkList === 'tag') value = element.prop('tagName').toLowerCase()
+      if (checkList === 'tag') {
+        value = element.prop('tagName').replace(/(\W)/g, '\\$1').toLowerCase()
+      }
       else {
         value = element.attr(checkList)
         value = value ? value.split(" ").filter(i => i) : null

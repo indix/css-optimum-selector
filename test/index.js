@@ -105,4 +105,15 @@ describe('CSS-Optimum-Selector', () => {
     done()
   })
 
+  it('should return unique css selector for element having special character in tag name', (done) => {
+    const crs = new CRS({
+      priority: ['tag'],
+    })
+    const $ = cheerio.load(html)
+    const ele1 = $('#sample_div')
+    const path = crs.getUniqueCssSelector(ele1.parent())
+    expect(path).to.equal('body > table > tbody > tr > td > div > sample\\:div')
+    done()
+  })
+
 })
